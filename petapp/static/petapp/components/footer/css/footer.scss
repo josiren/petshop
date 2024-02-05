@@ -1,0 +1,44 @@
+// Footer
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 70px;
+  background-color: var(--three-bg-color);
+  height: 385px;
+  .footer__item {
+    padding-top: 38px;
+    h3 {
+      font-family: "Gravity Regular", sans-serif;
+      font-size: 24px;
+      color: var(--second-text-color);
+    }
+    .item__descript {
+      display: flex;
+      flex-direction: column;
+    }
+    .item-social {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 7px;
+      &:nth-child(1) {
+        margin-top: 13px;
+      }
+      p.social__text {
+        font-family: "Gravity Light", sans-serif;
+        font-size: 14px;
+      }
+    }   
+  }
+  p.signature {
+    color: rgba($color: #000000, $alpha: 0.6);
+    font-family: "Gravity Book", sans-serif;
+    font-size: 15px;
+    padding-top: 160px;
+    letter-spacing: 0.4px;
+  }   
+  .s-regular{
+    font-family: "Gravity Regular", sans-serif;
+  }
+}

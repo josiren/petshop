@@ -1,88 +1,13 @@
-// Vars
-:root {
-  // Text
-  --main-text-color: #000000;
-  --second-text-color: #ff7269;
-  --three-text-color: #555555;
-  --four--text-color: #ffffff;
-
-  // Bg
-  --main-bg-color: #7bc3c2;
-  --second-bg-color: #ffaaa3;
-  --three-bg-color: #ffeeee;
-}
-html{
-  overflow-x: hidden;
-}
-.wrapper{
-  padding: 0px 25px;
-}
-
 .flex-row{
   display: flex;
   align-items: flex-start;
   gap: 126px;
 }
-
 // Header
 .header {
   padding: 0px calc(50% - 734px);
   display: flex;
   flex-direction: column;
-
-  &__top {
-    padding: 0px 10px;
-    display: flex;
-    align-items: center;
-    margin-top: 45px;
-    justify-content: space-between;
-    .header__nav {
-      margin-left: 52px;
-      ul {
-        display: flex;
-        gap: 92px;
-        li a {
-          font-family: "Gravity Regular", sans-serif;
-          font-weight: 500;
-          text-decoration: none;
-          font-size: 17.5px;
-          position: relative;
-          color: var(--second-text-color);
-          cursor: pointer;
-          &::before {
-            content: "";
-            bottom: 0;
-            right: 0;
-            top: 21.5px;
-            position: absolute;
-            width: 0%;
-            height: 2px;
-            background-color: var(--second-text-color);
-            transition: 0.5s;
-          }
-          &:hover::before {
-            width: 100%;
-            left: 0;
-          }
-          &::before.active {
-            content: "";
-            bottom: 0;
-            right: 0;
-            left: 0;
-            width: 100%;
-            top: 21.5px;
-            position: absolute;
-            height: 2px;
-            background-color: var(--second-text-color);
-          }
-        }
-      }
-    }
-    .header__buttons {
-      display: flex;
-      gap: 51px;
-    }
-  }
   &__main {
     display: flex;
     margin-top: 100px;
@@ -130,6 +55,7 @@ html{
 img.paw1 {
   position: absolute;
   top: 179px;
+  left: 0;
 }
 
 // Section product top
@@ -151,6 +77,7 @@ img.paw1 {
     margin-top: 87px;
     flex-wrap: wrap;
     gap: 135px;
+    z-index: 2;
     .item__description {
       margin-top: 15px;
       margin-left: 5px;
@@ -256,7 +183,7 @@ img.paw1 {
 img.paw2 {
   position: absolute;
   top: 1624px;
-  z-index: 1;
+  left: 0;
 }
 
 // Section why choose us
@@ -317,48 +244,5 @@ img.paw3 {
   position: absolute;
   top: 2242px;
   left: 973.31px;
-  z-index: 1;
-}
-
-// Footer
-.footer {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 70px;
-  background-color: var(--three-bg-color);
-  height: 385px;
-  .footer__item {
-    padding-top: 38px;
-    h3 {
-      font-family: "Gravity Regular", sans-serif;
-      font-size: 24px;
-      color: var(--second-text-color);
-    }
-    .item__descript {
-      display: flex;
-      flex-direction: column;
-    }
-    .item-social {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-top: 7px;
-      &:nth-child(1) {
-        margin-top: 13px;
-      }
-      p.social__text {
-        font-family: "Gravity Light", sans-serif;
-        font-size: 14px;
-      }
-    }   
-  }
-  p.signature {
-    background-color: var(--three-bg-color);
-    font-family: "Gravity Book", sans-serif;
-    font-size: 15px;
-    padding-top: 160px;
-    letter-spacing: 0.4px;
-  }   
 }
 

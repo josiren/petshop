@@ -1,0 +1,43 @@
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 70px;
+  background-color: var(--three-bg-color);
+  height: 385px;
+}
+.footer .footer__item {
+  padding-top: 38px;
+}
+.footer .footer__item h3 {
+  font-family: "Gravity Regular", sans-serif;
+  font-size: 24px;
+  color: var(--second-text-color);
+}
+.footer .footer__item .item__descript {
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer__item .item-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 7px;
+}
+.footer .footer__item .item-social:nth-child(1) {
+  margin-top: 13px;
+}
+.footer .footer__item .item-social p.social__text {
+  font-family: "Gravity Light", sans-serif;
+  font-size: 14px;
+}
+.footer p.signature {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Gravity Book", sans-serif;
+  font-size: 15px;
+  padding-top: 160px;
+  letter-spacing: 0.4px;
+}
+.footer .s-regular {
+  font-family: "Gravity Regular", sans-serif;
+}/*# sourceMappingURL=footer.css.map */

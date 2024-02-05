@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "Gravity Regular";
+  src: local("Gravity Regular"), url("Gravity-Regular.ttf") format("truetype"),
+    url("Gravity-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gravity Italic";
+  src: local("Gravity Italic"), url("Gravity-Italic.ttf") format("truetype"),
+    url("Gravity-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gravity UltraLight";
+  src: local("Gravity UltraLight"),
+    url("Gravity-UltraLight.ttf") format("truetype"),
+    url("Gravity-UltraLight.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gravity UltraLight Italic";
+  src: local("Gravity UltraLight Italic"),
+    url("Gravity-UltraLightItalic.ttf") format("truetype"),
+    url("Gravity-UltraLightItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gravity Light";
+  src: local("Gravity Light"), url("Gravity-Light.ttf") format("truetype"),
+    url("Gravity-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gravity Light Italic";
+  src: local("Gravity Light Italic"),
+    url("Gravity-LightItalic.ttf") format("truetype"),
+    url("Gravity-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gravity Book";
+  src: local("Gravity Book"), url("Gravity-Book.ttf") format("truetype"),
+    url("Gravity-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gravity Book Italic";
+  src: local("Gravity Book Italic"),
+    url("Gravity-BookItalic.ttf") format("truetype"),
+    url("Gravity-BookItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gravity Bold";
+  src: local("Gravity Bold"), url("Gravity-Bold.ttf") format("truetype"),
+    url("Gravity-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gravity Bold Italic";
+  src: local("Gravity Bold Italic"),
+    url("Gravity-BoldItalic.ttf") format("truetype"),
+    url("Gravity-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}

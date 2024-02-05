@@ -20,6 +20,8 @@ from petapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
-    path('contact', views.contact),
+    path('', views.index, name='home'),
+    path('catalog/', views.catalog, name='catalog'),
+    path('contact/', views.contact, name='contact'),
+    path('about/', views.about, name='about'),
 ]

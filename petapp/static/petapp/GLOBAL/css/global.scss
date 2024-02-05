@@ -1,0 +1,28 @@
+// Reset style
+@import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
+
+// Fonts
+@import url(./fonts/fonts.css);
+
+// Header
+@import url(../components/navbar/css/navbar.css);
+
+// Vars
+:root {
+  // Text
+  --main-text-color: #000000;
+  --second-text-color: #ff7269;
+  --three-text-color: #555555;
+  --four--text-color: #ffffff;
+
+  // Bg
+  --main-bg-color: #7bc3c2;
+  --second-bg-color: #ffaaa3;
+  --three-bg-color: #ffeeee;
+}
+html{
+  overflow-x: hidden;
+}
+.wrapper{
+  padding: 0px 25px;
+}
