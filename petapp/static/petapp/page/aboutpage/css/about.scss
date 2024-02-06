@@ -1,0 +1,32 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  margin-top: 74px;
+  h2{
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  &__descript{
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    font-family: "Gravity Book", sans-serif;
+    font-size: 24px;
+    max-width: 1172px;
+    min-width: 600px;
+    letter-spacing: 0.9px;
+    padding: 0px calc(50% - 577px);
+    p{
+      line-height: 29px;
+    }
+  }
+}
+
+img.banner {
+  margin-top: 90px;
+  max-width: 100%;
+  height: auto;
+  min-height: 427px;
+  min-width: 706px;
+}

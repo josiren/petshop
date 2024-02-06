@@ -2,10 +2,13 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
 
 // Fonts
-@import url(./fonts/fonts.css);
+@import url(../fonts/fonts.css);
 
 // Header
-@import url(../components/navbar/css/navbar.css);
+@import url(../../components/navbar/css/navbar.css);
+
+// Join Us
+@import url(../../components/join-us/css/join-us.css);
 
 // Vars
 :root {
@@ -20,9 +23,21 @@
   --second-bg-color: #ffaaa3;
   --three-bg-color: #ffeeee;
 }
+
+// Group Styles
 html{
   overflow-x: hidden;
 }
-.wrapper{
+body{
+  position: relative;
+}
+
+.wrapper {
   padding: 0px 25px;
+}
+
+
+h2 {
+  font-family: "Gravity Regular", sans-serif;
+  font-size: 32px;
 }

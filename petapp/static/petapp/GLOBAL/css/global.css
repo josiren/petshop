@@ -1,6 +1,7 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
 @import url(../fonts/fonts.css);
 @import url(../../components/navbar/css/navbar.css);
+@import url(../../components/join-us/css/join-us.css);
 :root {
   --main-text-color: #000000;
   --second-text-color: #ff7269;
@@ -15,6 +16,15 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  position: relative;
+}
+
 .wrapper {
   padding: 0px 25px;
+}
+
+h2 {
+  font-family: "Gravity Regular", sans-serif;
+  font-size: 32px;
 }/*# sourceMappingURL=global.css.map */

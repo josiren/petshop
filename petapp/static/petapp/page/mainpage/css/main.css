@@ -64,9 +64,6 @@ img.paw1 {
   flex-direction: column;
   font-family: "Gravity Regular", sans-serif;
 }
-.product-top h2 {
-  font-size: 32px;
-}
 .product-top .top__wrapper {
   display: flex;
   align-items: center;
@@ -102,78 +99,6 @@ img.paw1 {
   align-items: center;
 }
 
-.join-us {
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: auto;
-  margin: 175px auto 0px auto;
-  max-width: 1230px;
-  width: 100%;
-  background-color: var(--main-bg-color);
-  padding-bottom: 46px;
-  min-height: 263px;
-  border-radius: 10px;
-  color: var(--four--text-color);
-}
-.join-us h2 {
-  font-family: "Gravity Regular", sans-serif;
-  font-size: 32px;
-  margin-top: 46px;
-  letter-spacing: 1px;
-  text-align: center;
-}
-.join-us p {
-  text-align: center;
-  font-family: "Gravity Book", sans-serif;
-  font-size: 20px;
-  margin-top: 29px;
-  letter-spacing: 0.4px;
-  line-height: 23px;
-  padding: 0px 25px;
-}
-.join-us form.go-join {
-  display: flex;
-  margin: 32px 89px 0px 89px;
-  align-items: center;
-  position: relative;
-  justify-content: space-between;
-}
-.join-us form.go-join::before {
-  content: "";
-  margin: 0 3px;
-  top: 47.5px;
-  position: absolute;
-  width: 100%;
-  height: 1.5px;
-  background-color: var(--main-text-color);
-}
-.join-us form.go-join input.email {
-  background-color: transparent;
-  border: none;
-  font-family: "Gravity Light", sans-serif;
-  font-size: 23px;
-  outline: none;
-  width: 50.56%;
-}
-.join-us form.go-join input.email::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.4);
-}
-.join-us form.go-join input.email::placeholder {
-  color: rgba(0, 0, 0, 0.4);
-}
-.join-us form.go-join input.regisration {
-  font-family: "Gravity Regular", sans-serif;
-  font-size: 20px;
-  color: var(--four--text-color);
-  background-color: var(--second-bg-color);
-  padding: 15px 38px;
-  border: none;
-  margin-top: -16px;
-  border-radius: 10px;
-}
-
 img.paw2 {
   position: absolute;
   top: 1624px;
@@ -188,10 +113,6 @@ img.paw2 {
   justify-content: center;
   flex-direction: column;
   margin-top: 150px;
-}
-.choose-us h2 {
-  font-family: "Gravity Regular", sans-serif;
-  font-size: 32px;
 }
 .choose-us p.choose-us__descript {
   font-family: "Gravity Book", sans-serif;
