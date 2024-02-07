@@ -66,4 +66,9 @@
   border: none;
   margin-top: -16px;
   border-radius: 10px;
+  transition: background-color 0.2s linear;
+  cursor: pointer;
+}
+.join-us form.go-join input.regisration:hover {
+  background-color: var(--main-bg-hover);
 }/*# sourceMappingURL=join-us.css.map */

@@ -2,6 +2,7 @@
 @import url(../fonts/fonts.css);
 @import url(../../components/navbar/css/navbar.css);
 @import url(../../components/join-us/css/join-us.css);
+@import url(../../components/footer/css/footer.css);
 :root {
   --main-text-color: #000000;
   --second-text-color: #ff7269;
@@ -10,6 +11,7 @@
   --main-bg-color: #7bc3c2;
   --second-bg-color: #ffaaa3;
   --three-bg-color: #ffeeee;
+  --main-bg-hover: #ea8b83;
 }
 
 html {
@@ -24,7 +26,31 @@ body {
   padding: 0px 25px;
 }
 
+.flex-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 126px;
+}
+
 h2 {
   font-family: "Gravity Regular", sans-serif;
   font-size: 32px;
+}
+
+img.paw1 {
+  position: absolute;
+  top: 179px;
+  left: 0;
+}
+
+img.paw2 {
+  position: absolute;
+  top: 1624px;
+  left: 0;
+}
+
+img.paw3 {
+  position: absolute;
+  top: 2190px;
+  left: 973.31px;
 }/*# sourceMappingURL=global.css.map */

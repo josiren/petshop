@@ -25,4 +25,3 @@ def about(request):
         "about_page": "active-under" if request.resolver_match.url_name == "about" else ""
     }
     return render(request, 'petapp/about.html', context)
-

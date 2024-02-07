@@ -1,8 +1,10 @@
 .footer {
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 70px;
+  margin-top: 110px;
+  z-index: 2;
   background-color: var(--three-bg-color);
   height: 385px;
 }

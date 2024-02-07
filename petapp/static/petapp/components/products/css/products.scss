@@ -1,0 +1,46 @@
+// Section product
+.products {
+  display: flex;
+  margin-top: 248px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Gravity Regular", sans-serif;
+
+  .p__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 87px;
+    flex-wrap: wrap;
+    gap: 115px;
+    max-width: 1200px;
+    z-index: 2;
+    .item__description {
+      margin-top: 15px;
+      margin-left: 5px;
+      display: flex;
+      flex-direction: column;
+      .item__price {
+        font-size: 22px;
+      }
+
+      .item__name {
+        margin-top: 12px;
+        font-size: 20px;
+        max-width: 200px;
+        color: var(--three-text-color);
+        span {
+          color: var(--main-text-color);
+        }
+      }
+      .item__rate {
+        margin-top: 21px;
+        display: flex;
+        gap: 11px;
+        font-size: 20px;
+        align-items: center;
+      }
+    }
+  }
+}

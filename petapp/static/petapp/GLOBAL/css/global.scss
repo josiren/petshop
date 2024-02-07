@@ -10,6 +10,9 @@
 // Join Us
 @import url(../../components/join-us/css/join-us.css);
 
+// Footer
+@import url(../../components/footer/css/footer.css);
+
 // Vars
 :root {
   // Text
@@ -22,22 +25,49 @@
   --main-bg-color: #7bc3c2;
   --second-bg-color: #ffaaa3;
   --three-bg-color: #ffeeee;
+
+  // HoverBg
+  --main-bg-hover: #ea8b83;
 }
 
 // Group Styles
-html{
+html {
   overflow-x: hidden;
 }
-body{
+body {
   position: relative;
 }
 
 .wrapper {
   padding: 0px 25px;
 }
-
-
+.flex-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 126px;
+}
 h2 {
   font-family: "Gravity Regular", sans-serif;
   font-size: 32px;
+}
+
+// Bg image 1
+img.paw1 {
+  position: absolute;
+  top: 179px;
+  left: 0;
+}
+
+// Bg image 2
+img.paw2 {
+  position: absolute;
+  top: 1624px;
+  left: 0;
+}
+
+// Bg image 3
+img.paw3 {
+  position: absolute;
+  top: 2190px;
+  left: 973.31px;
 }

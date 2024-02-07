@@ -7,15 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'petapp/GLOBAL/css/global.css' %}">
   <link rel="stylesheet" href="{% static 'petapp/components/footer/css/footer.css' %}">
-
+  <link rel="stylesheet" href="{% static 'petapp/page/contactpage/css/contact.css' %}">
   <title>Контакты</title>
 
 </head>
 
 <body>
   <div class="wrapper">
+    <!-- Navigation -->
     <div class="header__top">
-      <img src="{% static 'petapp/page/mainpage/img/header/logo.svg' %}" alt="logo">
+      <img src="{% static 'petapp/GLOBAL/img/logo.png' %}" alt="logo">
       <nav class="header__nav">
         <ul>
           <li><a href="{% url 'home' %}" class="{{ home_page }}">Главная</a></li>
@@ -30,6 +31,10 @@
         <img src="{% static 'petapp/page/mainpage/img/header/person.svg' %}" alt="person">
       </div>
     </div>
+
+    <!-- Background paw1 -->
+    <img src="{% static 'petapp/GLOBAL/img/background/paw1.png' %}" alt="paw" class="paw1">
+
   </div>
 </body>
 

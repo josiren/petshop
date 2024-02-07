@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'petapp/GLOBAL/css/global.css' %}">
-    <link rel="stylesheet" href="{% static 'petapp/components/footer/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'petapp/components/products/css/products.css' %}">
     <link rel="stylesheet" href="{% static 'petapp/page/mainpage/css/main.css' %}">
     <title>PuffBall</title>
 </head>
@@ -17,7 +17,7 @@
         <!-- Header -->
         <header class="header">
             <div class="header__top">
-                <img src="{% static 'petapp/page/mainpage/img/header/logo.svg' %}" alt="logo">
+                <img src="{% static 'petapp/GLOBAL/img/logo.png' %}" alt="logo">
                 <nav class="header__nav">
                     <ul>
                         <li><a href="{% url 'home' %}" class="{{ home_page }}">Главная</a></li>
@@ -42,14 +42,15 @@
                 </div>
             </div>
         </header>
+
         <!-- Background paw1 -->
         <img src="{% static 'petapp/GLOBAL/img/background/paw1.png' %}" alt="paw" class="paw1">
 
         <!-- Section popular product -->
-        <section class="product-top">
+        <section class="products">
             <h2>Популярное</h2>
-            <div class="top__wrapper">
-                <div class="top__item">
+            <div class="p__wrapper">
+                <div class="p__item">
                     <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product">
                     <div class="item__description">
                         <h4 class="item__price">989₽</h4>
@@ -60,7 +61,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="top__item">
+                <div class="p__item">
                     <img src="{% static 'petapp/page/mainpage/img/product-top/product_2.png' %}" alt="product">
                     <div class="item__description">
                         <h4 class="item__price">499₽</h4>
@@ -71,7 +72,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="top__item">
+                <div class="p__item">
                     <img src="{% static 'petapp/page/mainpage/img/product-top/product_3.png' %}" alt="product">
                     <div class="item__description">
                         <h4 class="item__price">299₽</h4>
@@ -115,9 +116,11 @@
             <img src="{% static 'petapp/page/mainpage/img/choose-us/products.png' %}" alt="products">
         </section>
     </div>
+
     <!-- Background paw3 -->
     <img src="{% static 'petapp/GLOBAL/img/background/paw3.png' %}" alt="paw" class="paw3">
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="flex-row">
             <div class="footer__item">
@@ -155,7 +158,6 @@
                 </address>
             </div>
         </div>
-
         <p class="signature">&copy; 2024 <span class="s-regular">Зоомагазин</span> "PuffBall"</p>
     </footer>
 
