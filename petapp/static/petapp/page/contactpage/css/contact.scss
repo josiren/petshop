@@ -9,7 +9,9 @@
 }
 
 .flex-row {
-  gap: 250px;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 603px;
 }
 
 .map{
@@ -50,10 +52,5 @@
 
 // Img wrapper
 .img-wrap{
-  position: absolute;
-  top: 133.5px;
-  height: 760px;
   background: url(../../../GLOBAL/img/background/paw1.png) no-repeat;
-  width: 100%;
-  left: 0;
 }

@@ -11,7 +11,7 @@
   padding-bottom: 46px;
   min-height: 263px;
   border-radius: 10px;
-  color: var(--four--text-color);
+  color: var(--four-text-color);
 }
 .join-us h2, .buy-us h2 {
   margin-top: 46px;
@@ -60,7 +60,7 @@
 .join-us input.regisration, .join-us input.login, .buy-us input.regisration, .buy-us input.login {
   font-family: "Gravity Regular", sans-serif;
   font-size: 20px;
-  color: var(--four--text-color);
+  color: var(--four-text-color);
   background-color: var(--second-bg-color);
   padding: 15px 38px;
   border: none;

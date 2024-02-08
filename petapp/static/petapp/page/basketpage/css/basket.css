@@ -1,0 +1,22 @@
+.basket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 74px;
+}
+.basket h3 {
+  font-family: "Gravity Regular", sans-serif;
+  font-size: 32px;
+  margin-top: 198px;
+  color: var(--five-text-color);
+}
+
+.footer {
+  margin-top: 521px;
+}
+
+.img-wrap {
+  height: 831px;
+  background: url(../../../GLOBAL/img/background/paw1.png) no-repeat;
+}/*# sourceMappingURL=basket.css.map */

@@ -51,5 +51,9 @@
   .header__buttons {
     display: flex;
     gap: 51px;
+    .active-color-swap {
+      filter: invert(72%) sepia(33%) saturate(3647%) hue-rotate(313deg)
+        brightness(94%) contrast(118%);
+    }
   }
 }

@@ -50,4 +50,7 @@
 .header__top .header__buttons {
   display: flex;
   gap: 51px;
+}
+.header__top .header__buttons .active-color-swap {
+  filter: invert(72%) sepia(33%) saturate(3647%) hue-rotate(313deg) brightness(94%) contrast(118%);
 }/*# sourceMappingURL=navbar.css.map */

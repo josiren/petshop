@@ -19,12 +19,15 @@
   --main-text-color: #000000;
   --second-text-color: #ff7269;
   --three-text-color: #555555;
-  --four--text-color: #ffffff;
+  --four-text-color: #ffffff;
+  --five-text-color: #8d8d8d;
+  --six-text-color: #43807f;
 
   // Bg
   --main-bg-color: #7bc3c2;
   --second-bg-color: #ffaaa3;
   --three-bg-color: #ffeeee;
+  --four-bg-color: #ffffff;
 
   // HoverBg
   --main-bg-hover: #ea8b83;
@@ -41,6 +44,15 @@ body {
 .wrapper {
   padding: 0px 25px;
 }
+
+.img-wrap{
+  position: absolute;
+  top: 133.5px;
+  height: 760px;
+  width: 100%;
+  left: 0;
+}
+
 .flex-row {
   display: flex;
   align-items: flex-start;
@@ -51,10 +63,36 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+a{
+  text-decoration: none;
+}
 h2 {
   font-family: "Gravity Regular", sans-serif;
   font-size: 32px;
+}
+
+input{
+  display: flex;
+  padding-block: 0px;
+  padding-inline: 0px;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+.user-box{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 72px auto;
+  max-width: 1027px;
+  width: 100%;
+  height: 571px;
+  background-color: var(--main-bg-color);
+  background-image: url(../img/background/login-auth-bg.png);
+  background-repeat: no-repeat;
+  border-radius: 10px;
 }
 
 // Bg image 1

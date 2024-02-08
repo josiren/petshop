@@ -28,8 +28,10 @@
                 </nav>
                 <div class="header__buttons">
                     <img src="{% static 'petapp/page/mainpage/img/header/alarm.svg' %}" alt="alarm">
-                    <img src="{% static 'petapp/page/mainpage/img/header/basket.svg' %}" alt="basket">
-                    <img src="{% static 'petapp/page/mainpage/img/header/person.svg' %}" alt="person">
+                    <a href="{% url 'basket' %}"><img src="{% static 'petapp/page/mainpage/img/header/basket.svg' %}"
+                            alt="basket" class="{{ basket_page }}"></a>
+                    <a href="{% url 'auth' %}"><img src="{% static 'petapp/page/mainpage/img/header/person.svg' %}"
+                            alt="person" class="{{ auth_page }}"></a>
                 </div>
             </div>
             <div class="header__main">
@@ -124,7 +126,7 @@
     <footer class="footer">
         <div class="flex-row">
             <div class="footer__item">
-                <h3>контакты</h3>
+                <h3>адрес</h3>
                 <address class="item__descript">
                     <div class="item-social">
                         <img src="{% static 'petapp/page/mainpage/img/contact/city.svg' %}" alt="address">
