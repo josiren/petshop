@@ -25,6 +25,7 @@
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
+  margin-top: 45px;
 }
 .buy-us input.login {
   display: flex;
@@ -41,6 +42,7 @@
 
 .footer {
   height: auto;
+  margin-top: 63px;
 }
 .footer p.signature {
   padding: 44px;
@@ -49,7 +51,7 @@
 .img-wrap {
   position: absolute;
   top: 133.5px;
-  height: 920px;
+  height: 760px;
   background: url(../../../GLOBAL/img/background/paw1.png) no-repeat;
   width: 100%;
   left: 0;
