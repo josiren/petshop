@@ -1,0 +1,57 @@
+.f-alt {
+  background-color: transparent;
+  margin-top: 74px;
+  height: auto;
+  .footer__item {
+    padding-top: 0px;
+    margin-top: 30px;
+  }
+}
+
+.flex-row {
+  gap: 250px;
+}
+
+.map{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 23px;
+}
+
+.buy-us{
+  padding-bottom: 0px;
+  background-image: url(../img/bg_auth.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  input.login{
+    display: flex;
+    align-self: flex-start;
+    margin-top: 40px;
+  }
+  h2, p {
+    text-align: left;
+    padding: 0;
+  }
+  h2,p,input{
+    margin-left: 100px;
+  }
+}
+
+.footer{
+  height: auto;
+  p.signature{
+    padding: 44px;
+  }
+}
+
+// Img wrapper
+.img-wrap{
+  position: absolute;
+  top: 133.5px;
+  height: 920px;
+  background: url(../../../GLOBAL/img/background/paw1.png) no-repeat;
+  width: 100%;
+  left: 0;
+}

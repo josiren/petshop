@@ -46,6 +46,12 @@ body {
   align-items: flex-start;
   gap: 126px;
 }
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
 h2 {
   font-family: "Gravity Regular", sans-serif;
   font-size: 32px;

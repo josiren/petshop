@@ -1,1 +1,56 @@
-/*# sourceMappingURL=contact.css.map */
+.f-alt {
+  background-color: transparent;
+  margin-top: 74px;
+  height: auto;
+}
+.f-alt .footer__item {
+  padding-top: 0px;
+  margin-top: 30px;
+}
+
+.flex-row {
+  gap: 250px;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 23px;
+}
+
+.buy-us {
+  padding-bottom: 0px;
+  background-image: url(../img/bg_auth.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+.buy-us input.login {
+  display: flex;
+  align-self: flex-start;
+  margin-top: 40px;
+}
+.buy-us h2, .buy-us p {
+  text-align: left;
+  padding: 0;
+}
+.buy-us h2, .buy-us p, .buy-us input {
+  margin-left: 100px;
+}
+
+.footer {
+  height: auto;
+}
+.footer p.signature {
+  padding: 44px;
+}
+
+.img-wrap {
+  position: absolute;
+  top: 133.5px;
+  height: 920px;
+  background: url(../../../GLOBAL/img/background/paw1.png) no-repeat;
+  width: 100%;
+  left: 0;
+}/*# sourceMappingURL=contact.css.map */
