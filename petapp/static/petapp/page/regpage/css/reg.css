@@ -1,1 +1,37 @@
-/*# sourceMappingURL=reg.css.map */
+.footer {
+  margin-top: 138px;
+}
+
+.register {
+  margin: 0 auto;
+  display: flex;
+  max-width: 728px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.register .form__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 122px;
+}
+.register .reg__item {
+  gap: 9px;
+}
+.register .reg__item:nth-child(2) {
+  margin-top: 0;
+}
+.register .reg__item:nth-child(1) {
+  margin-top: 45px;
+}
+.register .r-side,
+.register .l-side {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+p {
+  margin-top: 12px;
+}/*# sourceMappingURL=reg.css.map */
