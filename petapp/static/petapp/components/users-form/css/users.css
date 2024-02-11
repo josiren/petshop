@@ -1,4 +1,23 @@
-.auth, .reg {
+.user-box {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 72px auto 0px auto;
+  max-width: 1027px;
+  width: 100%;
+  height: 571px;
+  background-color: var(--main-bg-color);
+  background-image: url(../img/bg.png);
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+.user-box .wrapper {
+  background-color: transparent;
+}
+
+.auth,
+.reg {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -8,23 +27,28 @@
   color: var(--six-text-color);
   font-family: "Gravity Regular", sans-serif;
 }
-.auth h3, .reg h3 {
+.auth h3,
+.reg h3 {
   font-size: 24px;
   margin-top: 102px;
   text-align: center;
 }
-.auth__item, .reg__item {
+.auth__item,
+.reg__item {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-.auth__item:nth-child(2), .reg__item:nth-child(2) {
+.auth__item:nth-child(2),
+.reg__item:nth-child(2) {
   margin-top: 45px;
 }
-.auth__item .item__label, .reg__item .item__label {
+.auth__item .item__label,
+.reg__item .item__label {
   font-size: 18px;
 }
-.auth__item input, .reg__item input {
+.auth__item input,
+.reg__item input {
   width: 100%;
   height: 40px;
   background-color: var(--four-bg-color);
@@ -32,7 +56,8 @@
   padding-right: 16px;
   padding-left: 16px;
 }
-.auth p, .reg p {
+.auth p,
+.reg p {
   color: var(--six-text-color);
   text-align: center;
 }
@@ -57,19 +82,4 @@ input.btn-login:hover {
 .img-wrap {
   height: 831px;
   background: url(../../../GLOBAL/img/background/paw1.png) no-repeat;
-}
-
-.user-box {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  margin: 72px auto;
-  max-width: 1027px;
-  width: 100%;
-  height: 571px;
-  background-color: var(--main-bg-color);
-  background-image: url(../img/bg.png);
-  background-repeat: no-repeat;
-  border-radius: 10px;
 }/*# sourceMappingURL=users.css.map */

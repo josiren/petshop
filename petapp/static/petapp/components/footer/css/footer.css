@@ -1,10 +1,12 @@
 .footer, .f-alt {
-  position: relative;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 110px;
-  z-index: 2;
+  z-index: -99;
   background-color: var(--three-bg-color);
   height: 385px;
 }

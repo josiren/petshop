@@ -2,6 +2,7 @@
   background-color: transparent;
   margin-top: 74px;
   height: auto;
+  z-index: 1;
 }
 .f-alt .footer__item {
   padding-top: 0px;
@@ -44,7 +45,6 @@
 
 .footer {
   height: auto;
-  margin-top: 63px;
 }
 .footer p.signature {
   padding: 44px;
@@ -52,4 +52,8 @@
 
 .img-wrap {
   background: url(../../../GLOBAL/img/background/paw1.png) no-repeat;
+}
+
+.parralax-wrap {
+  padding-bottom: 63px;
 }/*# sourceMappingURL=contact.css.map */

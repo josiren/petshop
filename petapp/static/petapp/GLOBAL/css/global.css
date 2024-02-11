@@ -23,11 +23,17 @@ html {
 }
 
 body {
+  scroll-behavior: smooth;
   position: relative;
 }
 
 .wrapper {
   padding: 0px 25px;
+  background-color: white;
+}
+
+.parralax-wrap {
+  padding-bottom: 110px;
 }
 
 .img-wrap {
