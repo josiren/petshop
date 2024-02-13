@@ -23,6 +23,6 @@ def auth(request):
 def reg(request):
     return render(request, 'petapp/reg.html')
 
-#Order pages
+# Bakset page 
 def basket(request):
     return render (request, 'petapp/basket.html')
