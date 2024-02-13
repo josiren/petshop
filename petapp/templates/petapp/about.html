@@ -17,19 +17,19 @@
       <img src="{% static 'petapp/GLOBAL/img/logo.png' %}" alt="logo">
       <nav class="header__nav">
         <ul>
-          <li><a href="{% url 'home' %}" class="{{ home_page }}">Главная</a></li>
-          <li><a href="{% url 'catalog' %}" class="{{ catalog_page }}">Каталог</a></li>
-          <li><a href="{% url 'contact' %}" class="{{ contact_page }}">Контакты</a></li>
-          <li><a href="{% url 'about' %}" class="{{ about_page }}">О нас</a></li>
+          <li><a href="{% url 'home' %}" class="home-page">Главная</a></li>
+          <li><a href="{% url 'catalog' %}" class="catalog-page">Каталог</a></li>
+          <li><a href="{% url 'contact' %}" class="contact-page">Контакты</a></li>
+          <li><a href="{% url 'about' %}" class="about-page">О нас</a></li>
         </ul>
       </nav>
       <div class="header__buttons">
         <img src="{% static 'petapp/page/mainpage/img/header/alarm.svg' %}" alt="alarm">
-        <a href="{% url 'basket' %}"><img src="{% static 'petapp/page/mainpage/img/header/basket.svg' %}" alt="basket"
-            class="{{ basket_page }}"></a>
-        <a href="{% url 'auth' %}"><img src="{% static 'petapp/page/mainpage/img/header/person.svg' %}" alt="person"
-            class="{{ auth_page }}"></a>
-      </div>
+        <a href="{% url 'basket' %}"><img src="{% static 'petapp/page/mainpage/img/header/basket.svg' %}"
+                alt="basket" class="basket-page"></a>
+        <a href="{% url 'auth' %}"><img src="{% static 'petapp/page/mainpage/img/header/person.svg' %}"
+                alt="person" class="auth-page"></a>
+    </div>
     </div>
 
     <!-- Section about us -->
@@ -115,7 +115,7 @@
     </div>
     <p class="signature">&copy; 2024 <span class="s-regular">Зоомагазин</span> "PuffBall"</p>
   </footer>
-
+  <script src="{% static 'petapp/GLOBAL/js/global.js' %}"></script>
 </body>
 
 </html>
