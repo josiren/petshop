@@ -2,13 +2,12 @@
 {% load static %}
 
 
+{% block title %}Главная{% endblock %}
 
 <!-- Content -->
 {% block content %}
-<div class="wrapper">
     <!-- Background paw1 -->
     <img src="{% static 'petapp/GLOBAL/img/background/paw1.png' %}" alt="paw" class="paw1">
-
     <!-- Section popular product -->
     <section class="products">
         <h2>Популярное</h2>
@@ -80,7 +79,6 @@
             <img src="{% static 'petapp/page/mainpage/img/choose-us/products.png' %}" alt="products">
         </section>
     </div>
-</div>
 
 <!-- Background paw3 -->
 <img src="{% static 'petapp/GLOBAL/img/background/paw3.png' %}" alt="paw" class="paw3">

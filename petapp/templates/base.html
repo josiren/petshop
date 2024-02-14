@@ -7,10 +7,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'petapp/GLOBAL/css/global.css' %}">
-  <title>PuffBall</title>
+  <link rel="stylesheet" href="{% static 'petapp/components/products/css/products.css' %}">
+  <link rel="stylesheet" href="{% static 'petapp/components/navbar/css/navbar.css' %}">
+  <link rel="stylesheet" href="{% static 'petapp/page/mainpage/css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'petapp/page/catalogpage/css/catalog.css' %}">
+  <link rel="stylesheet" href="{% static 'petapp/page/aboutpage/css/about.css' %}">
+  <link rel="stylesheet" href="{% static 'petapp/page/regpage/css/reg.css' %}">
+  <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
+  <div class="wrapper">
   <!-- Navigation -->
   <div class="header__top">
     <img src="{% static 'petapp/GLOBAL/img/logo.png' %}" alt="logo">
@@ -35,7 +42,7 @@
   {% block content %}
 
   {% endblock %}
-
+</div>
   <!-- Footer -->
   <footer class="footer">
     <div class="flex-row">
