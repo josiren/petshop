@@ -15,6 +15,10 @@
   max-width: 603px;
 }
 
+.flex-row:nth-last-child(2) {
+  display: none;
+}
+
 .map {
   display: flex;
   justify-content: center;

@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block head %}
 
-{% block title %}Регистрация{% endblock %}
+<link rel="stylesheet" href="{% static 'petapp/page/regpage/css/reg.css' %}">
+
+{% endblock %}
+
+{% block title %}Страница регистрации{% endblock %}
 
 <!-- Content -->
 {% block content %}
     <!-- Reg form -->
     <div class="parralax-wrap">
-
       <section class="check-in user-box">
         <h3>Регистрация</h3>
         <div class="wrapper">
@@ -44,10 +48,8 @@
             </div>
           </form>
         </div>
-
         <input type="button" value="Зарегистрироваться" class="btn-login" />
       </section>
-
     </div>
 
 

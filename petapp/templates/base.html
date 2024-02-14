@@ -9,10 +9,7 @@
   <link rel="stylesheet" href="{% static 'petapp/GLOBAL/css/global.css' %}">
   <link rel="stylesheet" href="{% static 'petapp/components/products/css/products.css' %}">
   <link rel="stylesheet" href="{% static 'petapp/components/navbar/css/navbar.css' %}">
-  <link rel="stylesheet" href="{% static 'petapp/page/mainpage/css/main.css' %}">
-  <link rel="stylesheet" href="{% static 'petapp/page/catalogpage/css/catalog.css' %}">
-  <link rel="stylesheet" href="{% static 'petapp/page/aboutpage/css/about.css' %}">
-  <link rel="stylesheet" href="{% static 'petapp/page/regpage/css/reg.css' %}">
+  {% block head %}{% endblock %}
   <title>{% block title %}{% endblock %}</title>
 </head>
 
@@ -34,7 +31,7 @@
       <a href="{% url 'basket' %}"><img src="{% static 'petapp/page/mainpage/img/header/basket.svg' %}" alt="basket"
           class="basket-page"></a>
       <a href="{% url 'auth' %}"><img src="{% static 'petapp/page/mainpage/img/header/person.svg' %}" alt="person"
-          class="auth-page"></a>
+          class="auth-page reg-page"></a>
     </div>
   </div>
 

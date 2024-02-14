@@ -1,103 +1,74 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'petapp/GLOBAL/css/global.css' %}">
-  <link rel="stylesheet" href="{% static 'petapp/components/footer/css/footer.css' %}">
-  <link rel="stylesheet" href="{% static 'petapp/page/contactpage/css/contact.css' %}">
-  <title>Контакты</title>
+{% block head %}
 
-</head>
+<link rel="stylesheet" href="{% static 'petapp/page/contactpage/css/contact.css' %}">
 
-<body>
-  <div class="wrapper">
-    <!-- Navigation -->
-    <div class="header__top">
-      <img src="{% static 'petapp/GLOBAL/img/logo.png' %}" alt="logo">
-      <nav class="header__nav">
-        <ul>
-          <li><a href="{% url 'home' %}" class="home-page">Главная</a></li>
-          <li><a href="{% url 'catalog' %}" class="catalog-page">Каталог</a></li>
-          <li><a href="{% url 'contact' %}" class="contact-page">Контакты</a></li>
-          <li><a href="{% url 'about' %}" class="about-page">О нас</a></li>
-        </ul>
-      </nav>
-      <div class="header__buttons">
-        <img src="{% static 'petapp/page/mainpage/img/header/alarm.svg' %}" alt="alarm">
-        <a href="{% url 'basket' %}"><img src="{% static 'petapp/page/mainpage/img/header/basket.svg' %}"
-                alt="basket" class="basket-page"></a>
-        <a href="{% url 'auth' %}"><img src="{% static 'petapp/page/mainpage/img/header/person.svg' %}"
-                alt="person" class="auth-page"></a>
-    </div>
-    </div>
-
-    <!-- Background paw1 -->
-    <!-- alternative solution, because the image is more scrollable pages -->
-    <div class="img-wrap"></div>
+{% endblock %}
+{% block title %}Наши контакты{% endblock %}
 
 
-    <!-- Contacts -->
-    <section class="f-alt">
-      <h2>Контакты</h2>
-      <div class="flex-row">
-        <div class="footer__item">
-          <h3>адрес</h3>
-          <address class="item__descript">
-            <div class="item-social">
-              <img src="{% static 'petapp/page/mainpage/img/contact/city.svg' %}" alt="address">
-              <p class="social__text">ул.Гагарина 27</p>
-            </div>
-            <div class="item-social">
-              <img src="{% static 'petapp/page/mainpage/img/contact/time.svg' %}" alt="time">
-              <p class="social__text">09:00 - 20:00, ежедневно</p>
-            </div>
-          </address>
+{% block content %}
+<!-- Background paw1 -->
+<!-- alternative solution, because the image is more scrollable pages -->
+<div class="img-wrap"></div>
+
+
+<!-- Contacts -->
+<section class="f-alt">
+  <h2>Контакты</h2>
+  <div class="flex-row">
+    <div class="footer__item">
+      <h3>адрес</h3>
+      <address class="item__descript">
+        <div class="item-social">
+          <img src="{% static 'petapp/page/mainpage/img/contact/city.svg' %}" alt="address">
+          <p class="social__text">ул.Гагарина 27</p>
         </div>
-        <div class="flex-column">
-          <div class="footer__item">
-            <h3>напишите нам</h3>
-            <address class="item__descript">
-              <div class="item-social">
-                <img src="{% static 'petapp/page/mainpage/img/contact/facebook.svg' %}" alt="facebook">
-                <img src="{% static 'petapp/page/mainpage/img/contact/twitter.svg' %}" alt="twitter">
-                <img src="{% static 'petapp/page/mainpage/img/contact/instagram.svg' %}" alt="instagram">
-              </div>
-            </address>
+        <div class="item-social">
+          <img src="{% static 'petapp/page/mainpage/img/contact/time.svg' %}" alt="time">
+          <p class="social__text">09:00 - 20:00, ежедневно</p>
+        </div>
+      </address>
+    </div>
+    <div class="flex-column">
+      <div class="footer__item">
+        <h3>напишите нам</h3>
+        <address class="item__descript">
+          <div class="item-social">
+            <img src="{% static 'petapp/page/mainpage/img/contact/facebook.svg' %}" alt="facebook">
+            <img src="{% static 'petapp/page/mainpage/img/contact/twitter.svg' %}" alt="twitter">
+            <img src="{% static 'petapp/page/mainpage/img/contact/instagram.svg' %}" alt="instagram">
           </div>
-          <div class="footer__item">
-            <h3>позвоните нам</h3>
-            <div class="item-social">
-              <img src="{% static 'petapp/page/mainpage/img/contact/phone.svg' %}" alt="phone">
-              <p class="social__text">8 (800) 555-35-35</p>
-            </div>
-          </div>
+        </address>
+      </div>
+      <div class="footer__item">
+        <h3>позвоните нам</h3>
+        <div class="item-social">
+          <img src="{% static 'petapp/page/mainpage/img/contact/phone.svg' %}" alt="phone">
+          <p class="social__text">8 (800) 555-35-35</p>
         </div>
       </div>
-    </section>
-
-    <!-- Map -->
-    <section class="map">
-      <script type="text/javascript" charset="utf-8" async
-        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad035c8ea09ecbba1d1006f57d7fb65548b766cd2bcf82f0076c5eb4903272641&amp;width=610&amp;height=244&amp;lang=ru_RU&amp;scroll=true"></script>
-    </section>
-
-
-    <!-- Buy us? -->
-    <div class="parralax-wrap">
-      <section class="buy-us">
-        <h2>Желаете приобрести товар?</h2>
-        <p>Авторизируйтесь для оформления заказа вашим любимцам</p>
-        <input type="button" class="login" value="Авторизироваться">
-      </section>
     </div>
   </div>
-  <footer class="footer">
-    <p class="signature">&copy; 2024 <span class="s-regular">Зоомагазин</span> "PuffBall"</p>
-  </footer>
-  <script src="{% static 'petapp/GLOBAL/js/global.js' %}"></script>
-</body>
+</section>
 
-</html>
+<!-- Map -->
+<section class="map">
+  <script type="text/javascript" charset="utf-8" async
+    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad035c8ea09ecbba1d1006f57d7fb65548b766cd2bcf82f0076c5eb4903272641&amp;width=610&amp;height=244&amp;lang=ru_RU&amp;scroll=true"></script>
+</section>
+
+
+<!-- Buy us? -->
+<div class="parralax-wrap">
+  <section class="buy-us">
+    <h2>Желаете приобрести товар?</h2>
+    <p>Авторизируйтесь для оформления заказа вашим любимцам</p>
+    <input type="button" class="login" value="Авторизироваться">
+  </section>
+</div>
+</div>
+
+{% endblock %}
