@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'petapp/GLOBAL/css/global.css' %}">
+  <title>PuffBall</title>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <div class="header__top">
+    <img src="{% static 'petapp/GLOBAL/img/logo.png' %}" alt="logo">
+    <nav class="header__nav">
+      <ul>
+        <li><a href="{% url 'home' %}" class="home-page">Главная</a></li>
+        <li><a href="{% url 'catalog' %}" class="catalog-page">Каталог</a></li>
+        <li><a href="{% url 'contact' %}" class="contact-page">Контакты</a></li>
+        <li><a href="{% url 'about' %}" class="about-page">О нас</a></li>
+      </ul>
+    </nav>
+    <div class="header__buttons">
+      <img src="{% static 'petapp/page/mainpage/img/header/alarm.svg' %}" alt="alarm">
+      <a href="{% url 'basket' %}"><img src="{% static 'petapp/page/mainpage/img/header/basket.svg' %}" alt="basket"
+          class="basket-page"></a>
+      <a href="{% url 'auth' %}"><img src="{% static 'petapp/page/mainpage/img/header/person.svg' %}" alt="person"
+          class="auth-page"></a>
+    </div>
+  </div>
+
+  <!-- Content -->
+  {% block content %}
+
+  {% endblock %}
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="flex-row">
+      <div class="footer__item">
+        <h3>адрес</h3>
+        <address class="item__descript">
+          <div class="item-social">
+            <img src="{% static 'petapp/page/mainpage/img/contact/city.svg' %}" alt="address">
+            <p class="social__text">ул.Гагарина 27</p>
+          </div>
+          <div class="item-social">
+            <img src="{% static 'petapp/page/mainpage/img/contact/time.svg' %}" alt="time">
+            <p class="social__text">09:00 - 20:00, ежедневно</p>
+          </div>
+        </address>
+      </div>
+      <div class="footer__item">
+        <h3>контакты</h3>
+        <address class="item__descript">
+          <div class="item-social">
+            <img src="{% static 'petapp/page/mainpage/img/contact/facebook.svg' %}" alt="facebook">
+            <p class="social__text">Facebook</p>
+          </div>
+          <div class="item-social">
+            <img src="{% static 'petapp/page/mainpage/img/contact/twitter.svg' %}" alt="twitter">
+            <p class="social__text">Twitter</p>
+          </div>
+          <div class="item-social">
+            <img src="{% static 'petapp/page/mainpage/img/contact/instagram.svg' %}" alt="instagram">
+            <p class="social__text">Instagram</p>
+          </div>
+          <div class="item-social">
+            <img src="{% static 'petapp/page/mainpage/img/contact/phone.svg' %}" alt="phone">
+            <p class="social__text">8 (800) 555-35-35</p>
+          </div>
+        </address>
+      </div>
+    </div>
+    <p class="signature">&copy; 2024 <span class="s-regular">Зоомагазин</span> "PuffBall"</p>
+  </footer>
+  <script src="{% static 'petapp/GLOBAL/js/global.js' %}"></script>
+</body>
+
+</html>
