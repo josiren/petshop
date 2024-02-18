@@ -1,19 +1,19 @@
 .basket {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 74px;
+  min-height: 50rem;
+  padding-bottom: 150px;
 }
-.basket h3 {
+.basket h3.empty-text {
   font-family: "Gravity Regular", sans-serif;
   font-size: 32px;
   margin-top: 198px;
   color: var(--five-text-color);
 }
-
-.footer {
-  margin-top: 521px;
+.basket .item__rate .rate {
+  transition: 0.3s;
 }
 
 .img-wrap {

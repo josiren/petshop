@@ -14,7 +14,7 @@
   max-width: 677px;
 }
 .header__main .l-side h1 {
-  font-size: 40px;
+  font-size: calc(24px + 0.8333333333vw);
   line-height: 45px;
   letter-spacing: 1.9px;
 }
@@ -22,7 +22,7 @@
   color: var(--second-text-color);
 }
 .header__main .l-side p {
-  font-size: 24px;
+  font-size: calc(14px + 0.5208333333vw);
   margin-top: 26px;
   line-height: 29px;
   letter-spacing: 0.9px;
@@ -41,6 +41,48 @@ img.paw2 {
   position: absolute;
   top: 1624px;
   left: 0;
+}
+
+.swiper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin-top: 248px;
+  font-family: "Gravity Regular", sans-serif;
+}
+.swiper .swiper-wrapper {
+  margin-top: 87px;
+  z-index: 2;
+}
+.swiper .swiper-wrapper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+}
+.swiper .swiper-wrapper .item__description {
+  margin-top: 15px;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.swiper .swiper-wrapper .item__description .item__price {
+  font-size: 22px;
+}
+.swiper .swiper-wrapper .item__description .item__name {
+  margin-top: 12px;
+  font-size: 20px;
+  max-width: 200px;
+  color: var(--three-text-color);
+}
+.swiper .swiper-wrapper .item__description .item__name span {
+  color: var(--main-text-color);
+}
+.swiper .swiper-wrapper .item__description .item__rate {
+  margin-top: 21px;
+  display: flex;
+  gap: 11px;
+  font-size: 20px;
+  align-items: center;
 }
 
 .choose-us {

@@ -9,37 +9,39 @@
   <link rel="stylesheet" href="{% static 'petapp/GLOBAL/css/global.css' %}">
   <link rel="stylesheet" href="{% static 'petapp/components/products/css/products.css' %}">
   <link rel="stylesheet" href="{% static 'petapp/components/navbar/css/navbar.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   {% block head %}{% endblock %}
   <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
   <div class="wrapper">
-  <!-- Navigation -->
-  <div class="header__top">
-    <img src="{% static 'petapp/GLOBAL/img/logo.png' %}" alt="logo">
-    <nav class="header__nav">
-      <ul>
-        <li><a href="{% url 'home' %}" class="home-page">Главная</a></li>
-        <li><a href="{% url 'catalog' %}" class="catalog-page">Каталог</a></li>
-        <li><a href="{% url 'contact' %}" class="contact-page">Контакты</a></li>
-        <li><a href="{% url 'about' %}" class="about-page">О нас</a></li>
-      </ul>
-    </nav>
-    <div class="header__buttons">
-      <img src="{% static 'petapp/page/mainpage/img/header/alarm.svg' %}" alt="alarm">
-      <a href="{% url 'basket' %}"><img src="{% static 'petapp/page/mainpage/img/header/basket.svg' %}" alt="basket"
-          class="basket-page"></a>
-      <a href="{% url 'auth' %}"><img src="{% static 'petapp/page/mainpage/img/header/person.svg' %}" alt="person"
-          class="auth-page reg-page"></a>
+    <!-- Navigation -->
+    <div class="header__top">
+      <img src="{% static 'petapp/GLOBAL/img/logo.png' %}" alt="logo">
+      <nav class="header__nav">
+        <ul>
+          <li><a href="{% url 'home' %}" class="home-page">Главная</a></li>
+          <li><a href="{% url 'catalog' %}" class="catalog-page">Каталог</a></li>
+          <li><a href="{% url 'contact' %}" class="contact-page">Контакты</a></li>
+          <li><a href="{% url 'about' %}" class="about-page">О нас</a></li>
+        </ul>
+      </nav>
+      <div class="header__buttons">
+        <img src="{% static 'petapp/page/mainpage/img/header/alarm.svg' %}" alt="alarm">
+        <a href="{% url 'basket' %}"><img src="{% static 'petapp/page/mainpage/img/header/basket.svg' %}" alt="basket"
+            class="basket-page"></a>
+        <a href="{% url 'auth' %}"><img src="{% static 'petapp/page/mainpage/img/header/person.svg' %}" alt="person"
+            class="auth-page reg-page"></a>
+      </div>
     </div>
+
+    <!-- Content -->
+    {% block content %}
+
+    {% endblock %}
   </div>
-
-  <!-- Content -->
-  {% block content %}
-
-  {% endblock %}
-</div>
   <!-- Footer -->
   <footer class="footer">
     <div class="flex-row">
@@ -81,6 +83,7 @@
     <p class="signature">&copy; 2024 <span class="s-regular">Зоомагазин</span> "PuffBall"</p>
   </footer>
   <script src="{% static 'petapp/GLOBAL/js/global.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>

@@ -23,11 +23,12 @@
 
 <!-- Background paw1 -->
 <img src="{% static 'petapp/GLOBAL/img/background/paw1.png' %}" alt="paw" class="paw1">
+
 <!-- Section popular product -->
-<section class="products">
+<section class="swiper">
     <h2>Популярное</h2>
-    <div class="p__wrapper">
-        <div class="p__item">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
             <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product">
             <div class="item__description">
                 <h4 class="item__price">989₽</h4>
@@ -38,7 +39,7 @@
                 </div>
             </div>
         </div>
-        <div class="p__item">
+        <div class="swiper-slide">
             <img src="{% static 'petapp/page/mainpage/img/product-top/product_2.png' %}" alt="product">
             <div class="item__description">
                 <h4 class="item__price">499₽</h4>
@@ -49,7 +50,40 @@
                 </div>
             </div>
         </div>
-        <div class="p__item">
+        <div class="swiper-slide">
+            <img src="{% static 'petapp/page/mainpage/img/product-top/product_3.png' %}" alt="product">
+            <div class="item__description">
+                <h4 class="item__price">299₽</h4>
+                <p class="item__name"><span>Wagg</span> / Угощение для кошек 60g</p>
+                <div class="item__rate">
+                    <img src="{% static 'petapp/page/mainpage/img/product-top/rate.svg' %}" alt="rate">
+                    <h3 class="rate__text">4.8</h3>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product">
+            <div class="item__description">
+                <h4 class="item__price">989₽</h4>
+                <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
+                <div class="item__rate">
+                    <img src="{% static 'petapp/page/mainpage/img/product-top/rate.svg' %}" alt="rate">
+                    <h3 class="rate__text">4.9</h3>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="{% static 'petapp/page/mainpage/img/product-top/product_2.png' %}" alt="product">
+            <div class="item__description">
+                <h4 class="item__price">499₽</h4>
+                <p class="item__name"><span>Wagg</span> / Корм для морских свинок 4kg</p>
+                <div class="item__rate">
+                    <img src="{% static 'petapp/page/mainpage/img/product-top/rate.svg' %}" alt="rate">
+                    <h3 class="rate__text">4.8</h3>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
             <img src="{% static 'petapp/page/mainpage/img/product-top/product_3.png' %}" alt="product">
             <div class="item__description">
                 <h4 class="item__price">299₽</h4>
@@ -97,4 +131,7 @@
 
 <!-- Background paw3 -->
 <img src="{% static 'petapp/GLOBAL/img/background/paw3.png' %}" alt="paw" class="paw3">
+
+
+<script src="{% static 'petapp/page/mainpage/js/main.js' %}" type="module"></script>
 {% endblock %}

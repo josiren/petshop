@@ -1,12 +1,25 @@
-// Section product
 .products {
   display: flex;
-  margin-top: 248px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   font-family: "Gravity Regular", sans-serif;
-
+  margin-top: 74px;
+  .product__add {
+    width: 100%;
+    margin-top: 26px;
+    padding: 23px;
+    border: none;
+    background: url(../../../components/products/img/basket.svg) no-repeat
+      center center;
+    background-color: var(--second-bg-color);
+    border-radius: 10px;
+    transition: background-color 0.2s linear;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--main-bg-hover);
+    }
+  }
   .p__wrapper {
     display: flex;
     align-items: center;
@@ -16,6 +29,9 @@
     gap: 115px;
     max-width: 1200px;
     z-index: 2;
+    .p__item {
+      min-width: 115px;
+    }
     .item__description {
       margin-top: 15px;
       margin-left: 5px;

@@ -1,21 +1,3 @@
-.products {
-  margin-top: 74px;
-}
-.products .product__add {
-  width: 100%;
-  margin-top: 26px;
-  padding: 23px;
-  border: none;
-  background: url(../../../components/products/img/basket.svg) no-repeat center center;
-  background-color: var(--second-bg-color);
-  border-radius: 10px;
-  transition: background-color 0.2s linear;
-  cursor: pointer;
-}
-.products .product__add:hover {
-  background-color: var(--main-bg-hover);
-}
-
 img.paw1 {
   top: 133.5px;
 }
