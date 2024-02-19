@@ -54,9 +54,4 @@
 .basket .rating__group .rating__star:nth-of-type(5) {
   z-index: 1;
   width: 10em;
-}
-
-.img-wrap {
-  height: 831px;
-  background: url(../../../GLOBAL/img/background/paw1.png) no-repeat;
 }/*# sourceMappingURL=basket.css.map */

@@ -9,10 +9,6 @@
   color: var(--six-text-color);
 }
 
-.img-wrap {
-  height: 687px;
-}
-
 .reg {
   max-width: 728px;
   flex-direction: row;

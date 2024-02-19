@@ -44,23 +44,24 @@ body {
   scroll-behavior: smooth;
   position: relative;
 }
-input[type="radio" i]{
+input[type="radio" i] {
   margin: 0;
 }
 
 .wrapper {
   padding: 0px calc(0px + 26 * (100vw / 1920));
+}
+
+.global__wrapper {
+  background-image: url(../../GLOBAL/img/background/paws.svg);
+  background-repeat: no-repeat;
   background-color: white;
+  background-position-y: 180px;
+  background-position-x: -25px;
 }
-.parralax-wrap{
+
+.parralax-wrap {
   padding-bottom: 110px;
-}
-.img-wrap {
-  position: absolute;
-  top: 133.5px;
-  height: 760px;
-  width: 100%;
-  left: 0;
 }
 
 .flex-row {
@@ -90,25 +91,4 @@ input {
   outline: none;
   border: none;
   box-sizing: border-box;
-}
-
-// Bg image 1
-img.paw1 {
-  position: absolute;
-  top: 179px;
-  left: 0;
-}
-
-// Bg image 2
-img.paw2 {
-  position: absolute;
-  top: 1624px;
-  left: 0;
-}
-
-// Bg image 3
-img.paw3 {
-  position: absolute;
-  top: 2190px;
-  left: 973.31px;
 }

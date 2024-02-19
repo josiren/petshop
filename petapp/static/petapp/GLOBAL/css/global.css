@@ -33,19 +33,18 @@ input[type=radio i] {
 
 .wrapper {
   padding: 0px calc(0px + 1.3541666667vw);
+}
+
+.global__wrapper {
+  background-image: url(../../GLOBAL/img/background/paws.svg);
+  background-repeat: no-repeat;
   background-color: white;
+  background-position-y: 180px;
+  background-position-x: -25px;
 }
 
 .parralax-wrap {
   padding-bottom: 110px;
-}
-
-.img-wrap {
-  position: absolute;
-  top: 133.5px;
-  height: 760px;
-  width: 100%;
-  left: 0;
 }
 
 .flex-row {
@@ -76,22 +75,4 @@ input {
   outline: none;
   border: none;
   box-sizing: border-box;
-}
-
-img.paw1 {
-  position: absolute;
-  top: 179px;
-  left: 0;
-}
-
-img.paw2 {
-  position: absolute;
-  top: 1624px;
-  left: 0;
-}
-
-img.paw3 {
-  position: absolute;
-  top: 2190px;
-  left: 973.31px;
 }/*# sourceMappingURL=global.css.map */
