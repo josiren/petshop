@@ -1,13 +1,9 @@
-img.paw1 {
-  top: 133.5px;
+.global__wrapper {
+  background-image: url(../img/paws.svg);
+  background-repeat: no-repeat;
+  background-color: white;
 }
 
-img.paw2 {
-  top: 1393px;
-  left: 0;
-}
-
-img.paw3 {
-  top: 2079px;
-  left: 958.31px;
+.wrapper {
+  background-color: transparent;
 }/*# sourceMappingURL=catalog.css.map */

@@ -44,6 +44,9 @@ body {
   scroll-behavior: smooth;
   position: relative;
 }
+input[type="radio" i]{
+  margin: 0;
+}
 
 .wrapper {
   padding: 0px calc(0px + 26 * (100vw / 1920));

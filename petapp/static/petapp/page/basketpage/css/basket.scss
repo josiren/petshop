@@ -2,8 +2,6 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 74px;
-  min-height: 50rem;
   padding-bottom: 150px;
   h3.empty-text {
     font-family: "Gravity Regular", sans-serif;
@@ -11,9 +9,54 @@
     margin-top: 198px;
     color: var(--five-text-color);
   }
-  .item__rate {
-    .rate {
-      transition: 0.3s;
+  .rating__group {
+    position: relative;
+    width: 10em;
+    height: 2em;
+    margin-top: 20px;
+    background-image: url(../../../GLOBAL/img/rating/rate.svg);
+    background-size: 2em auto;
+    background-repeat: repeat-x;
+    .rating__star {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 32px;
+      font-size: inherit;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      &:hover,
+      &:checked {
+        background-image: url(../../../GLOBAL/img/rating/rate-checked.svg);
+      }
+      :hover ~ & {
+        background-image: url(../../../GLOBAL/img/rating/rate.svg);
+      }
+      &:nth-of-type(1) {
+        z-index: 5;
+        width: 2em;
+      }
+
+      &:nth-of-type(2) {
+        z-index: 4;
+        width: 4em;
+      }
+
+      &:nth-of-type(3) {
+        z-index: 3;
+        width: 6em;
+      }
+
+      &:nth-of-type(4) {
+        z-index: 2;
+        width: 8em;
+      }
+
+      &:nth-of-type(5) {
+        z-index: 1;
+        width: 10em;
+      }
     }
   }
 }

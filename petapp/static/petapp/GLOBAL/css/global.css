@@ -27,6 +27,10 @@ body {
   position: relative;
 }
 
+input[type=radio i] {
+  margin: 0;
+}
+
 .wrapper {
   padding: 0px calc(0px + 1.3541666667vw);
   background-color: white;
