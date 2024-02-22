@@ -103,7 +103,10 @@
     <form class="go-join">
         <input type="email" class="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="30"
             placeholder="E-Mail" required>
-        <input type="button" class="regisration" value="Регистрация">
+        <a href="{% url 'reg' %}">
+            <input type="button" class="regisration" value="Регистрация">
+        </a>
+
     </form>
 </section>
 

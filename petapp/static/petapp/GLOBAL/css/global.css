@@ -15,6 +15,7 @@
   --second-bg-color: #ffaaa3;
   --three-bg-color: #ffeeee;
   --four-bg-color: #ffffff;
+  --five-bg-color: #4f9695;
   --main-bg-hover: #ea8b83;
 }
 
@@ -64,7 +65,7 @@ a {
 
 h2 {
   font-family: "Gravity Regular", sans-serif;
-  font-size: 32px;
+  font-size: calc(20px + 0.625vw);
   text-align: center;
 }
 
