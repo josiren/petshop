@@ -89,9 +89,12 @@ img.paw2 {
         gap: 11px;
         font-size: calc(12px + 10 * (100vw / 1920));
         align-items: center;
-        img{
+        @media (max-width: 1300px) {
+          margin-top: 21px;
+        }
+        img {
           max-width: 100%;
-          width: calc(20px + 10 * (100vw / 1920));;
+          width: calc(20px + 10 * (100vw / 1920));
         }
       }
     }
@@ -141,7 +144,7 @@ img.paw2 {
     margin-top: 55px;
     max-width: 100%;
     height: auto;
-    
+
     min-width: 340px;
     min-height: 198px;
   }

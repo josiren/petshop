@@ -85,6 +85,11 @@ img.paw2 {
   font-size: calc(12px + 0.5208333333vw);
   align-items: center;
 }
+@media (max-width: 1300px) {
+  .swiper .swiper-wrapper .item__description .item__rate {
+    margin-top: 21px;
+  }
+}
 .swiper .swiper-wrapper .item__description .item__rate img {
   max-width: 100%;
   width: calc(20px + 0.5208333333vw);
