@@ -67,6 +67,7 @@ img.paw2 {
     .item__description {
       margin-top: 15px;
       margin-left: 5px;
+      height: 142px;
       display: flex;
       flex-direction: column;
       .item__price {
@@ -83,14 +84,13 @@ img.paw2 {
         }
       }
       .item__rate {
-        margin-top: 21px;
+        margin-top: auto;
         display: flex;
         gap: 11px;
         font-size: calc(12px + 10 * (100vw / 1920));
         align-items: center;
         img{
           max-width: 100%;
-          height: auto;
           width: calc(20px + 10 * (100vw / 1920));;
         }
       }
@@ -141,7 +141,8 @@ img.paw2 {
     margin-top: 55px;
     max-width: 100%;
     height: auto;
-    min-height: 427px;
-    min-width: 706px;
+    
+    min-width: 340px;
+    min-height: 198px;
   }
 }
