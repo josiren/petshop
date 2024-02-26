@@ -26,3 +26,7 @@ def reg(request):
 # Bakset page 
 def basket(request):
     return render (request, 'petapp/basket.html')
+
+#User page
+def user(request):
+    return render(request, 'petapp/user.html')

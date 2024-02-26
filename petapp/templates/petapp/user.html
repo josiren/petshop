@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{% static 'petapp/page/userpage/css/user.css' %}">
+
+{% endblock %}
+
+{% block title %}Страница пользователя{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<!-- User info -->
+<div class="user parralax-wrap">
+
+  <!-- User Box -->
+  <section class="user-info user-box">
+    <img src="{% static 'petapp/page/userpage/img/avatar.png' %}" alt="avatar" class="user__img">
+    <div class="user__descript">
+      <h3 class="user-name">
+        Шумакова Анна Евгеньевна
+      </h3>
+      <p class="user-phone">8(951)088-52-27</p>
+      <p class="user-mail">onegina_05@mail.ru</p>
+    </div>
+    <input type="button" class="user-edit">
+  </section>
+
+  <!-- Basket Box -->
+  <section class="basket user-box">
+
+  </section>
+
+  <!-- Delivery Box -->
+  <section class="delivery user-box">
+
+  </section>
+</div>
+
+{% endblock %}
