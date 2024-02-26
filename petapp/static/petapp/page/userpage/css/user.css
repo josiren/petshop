@@ -56,7 +56,16 @@
   height: 25px;
   flex: 1 1;
   background-repeat: no-repeat;
-  background-color: transparent;
   margin-top: -52px;
   margin-left: -25px;
+}
+.user-info .user-leave {
+  margin-left: auto;
+  margin-top: auto;
+  padding: 25px;
+}
+.user-info .user-leave input {
+  font-family: "Gravity Regular", sans-serif;
+  font-size: 15px;
+  color: var(--six-text-color);
 }/*# sourceMappingURL=user.css.map */

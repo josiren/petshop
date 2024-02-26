@@ -13,7 +13,7 @@
   flex-direction: row;
   max-width: none;
   width: 100%;
-  padding-left: calc(30px + 62 * (100vw / 1920));;
+  padding-left: calc(30px + 62 * (100vw / 1920));
   align-items: center;
 }
 .basket,
@@ -26,39 +26,47 @@
   }
 }
 
-.user-info{
+.user-info {
   position: relative;
   gap: 42px;
-  .user__img{
+  .user__img {
     max-width: 110px;
     max-height: 110px;
   }
-  .user__descript{
+  .user__descript {
     font-family: "Gravity Light", sans-serif;
     color: var(--four-text-color);
     display: flex;
     font-size: 18px;
     flex-direction: column;
-    .user-name{
+    .user-name {
       font-family: "Gravity Regular", sans-serif;
       font-size: 24px;
     }
-    .user-phone{
+    .user-phone {
       margin-top: 15px;
     }
-    .user-mail{
+    .user-mail {
       margin-top: 5px;
     }
   }
-  .user-edit{
+  .user-edit {
     background-image: url(../img/edit.svg);
     max-width: 25px;
     height: 25px;
     flex: 1 1;
     background-repeat: no-repeat;
-    background-color: transparent;
     margin-top: -52px;
     margin-left: -25px;
-    
+  }
+  .user-leave {
+    margin-left: auto;
+    margin-top: auto;
+    padding: 25px;
+    input {
+      font-family: "Gravity Regular", sans-serif;
+      font-size: 15px;
+      color: var(--six-text-color);
+    }
   }
 }

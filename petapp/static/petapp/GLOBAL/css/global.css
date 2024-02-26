@@ -72,6 +72,7 @@ h2 {
 input {
   display: flex;
   padding-block: 0px;
+  background-color: transparent;
   padding-inline: 0px;
   outline: none;
   cursor: pointer;
