@@ -1,0 +1,40 @@
+.user__img {
+  max-width: 110px;
+  max-height: 110px;
+  margin: 30px auto;
+}
+
+.edit-info {
+  max-width: 728px;
+  flex-direction: row;
+  width: 100%;
+  gap: 0;
+  -moz-column-gap: 122px;
+       column-gap: 122px;
+  row-gap: 73px;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user-box {
+  min-height: 571px;
+  height: auto;
+}
+
+input.btn-login {
+  margin-top: 0;
+  margin-right: 0;
+  color: var(--four-text-color);
+  margin-left: auto;
+}
+
+.user-leave {
+  margin-left: auto;
+  margin-top: auto;
+  padding: 25px;
+}
+.user-leave input {
+  font-size: 15px;
+  color: var(--six-text-color);
+}/*# sourceMappingURL=user_edit.css.map */

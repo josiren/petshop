@@ -28,4 +28,5 @@ urlpatterns = [
     path('reg/', views.reg, name='reg'),
     path('basket/', views.basket, name='basket'),
     path('user/', views.user, name='user'),
+    path('user/edit/', views.user_edit, name='user_edit'),
 ]

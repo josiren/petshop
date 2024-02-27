@@ -30,3 +30,6 @@ def basket(request):
 #User page
 def user(request):
     return render(request, 'petapp/user.html')
+
+def user_edit(request):
+    return render(request, 'petapp/user_edit.html')

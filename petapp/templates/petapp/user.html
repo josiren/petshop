@@ -24,18 +24,32 @@
       <p class="user-phone">8(951)088-52-27</p>
       <p class="user-mail">onegina_05@mail.ru</p>
     </div>
-    <a href="#" class="user-edit"><input type="button"></a>
+    <a href="{% url 'user_edit' %}" class="user-edit"><input type="button"></a>
     <a href="#" class="user-leave"><input type="button" value="Выйти"></a>
   </section>
 
   <!-- Basket Box -->
   <section class="basket user-box">
-
+    <h3 class="basket-title">Моя корзина</h3>
+    <div class="basket-descript">
+      <p class="descript-amount">4 заказа</p>
+      <p class="descript-price">15.866 ₽</p>
+    </div>
+    <a href="{% url 'basket' %}">
+      <input type="button" class="basket-button" value="Подробнее">
+    </a>
   </section>
 
   <!-- Delivery Box -->
   <section class="delivery user-box">
-
+    <h3 class="delivery-title">Мои доставки</h3>
+    <div class="delivery-descript">
+      <p class="descript-amount">4 заказа</p>
+    </div>
+    <!-- need replace href -->
+    <a href="{% url 'basket' %}">
+      <input type="button" class="delivery-button" value="Подробнее">
+    </a>
   </section>
 </div>
 

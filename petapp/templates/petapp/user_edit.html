@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{% static 'petapp/page/regpage/css/reg.css' %}">
+<link rel="stylesheet" href="{% static 'petapp/page/user_editpage/css/user_edit.css' %}">
+
+
+{% endblock %}
+
+{% block title %}Страница регистрации{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<!-- Reg form -->
+<div class="parralax-wrap">
+  <section class="check-in user-box">
+    <input type="image" src="{% static 'petapp/page/userpage/img/avatar.png' %}" alt="avatar" class="user__img">
+    <div class="wrapper">
+      <form class="edit-info reg">
+        <div class="l-side">
+          <div class="reg__item">
+            <label for="surname" class="item__label">Фамилия</label>
+            <input type="surname" name="surname" id="surname" />
+          </div>
+          <div class="reg__item">
+            <label for="name" class="item__label">Имя</label>
+            <input type="name" name="name" id="name" />
+          </div>
+          <div class="reg__item">
+            <label for="patrynomic" class="item__label">Отчество</label>
+            <input type="patrynomic" name="patrynomic" id="patrynomic" />
+          </div>
+        </div>
+        <!-- Right side -->
+        <div class="r-side">
+          <div class="reg__item">
+            <label for="phone" class="item__label">Номер телефона</label>
+            <input type="phone" name="phone" id="phone" />
+          </div>
+          <div class="reg__item">
+            <label for="email" class="item__label">Электронная почта</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="reg__item">
+            <label for="address" class="item__label">Адрес</label>
+            <input type="address" name="address" id="address" />
+          </div>
+        </div>
+        <input type="submit" value="Сохранить" class="btn-login" />
+      </form>
+      <a href="#" class="user-leave"><input type="button" value="Выйти"></a>
+    </div>
+  </section>
+</div>
+<script src="https://unpkg.com/imask"></script>
+<script src="{% static 'petapp/page/regpage/reg.js' %}"></script>
+{% endblock %}
