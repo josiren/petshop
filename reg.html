@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{% static 'petapp/page/regpage/css/reg.css' %}">
+
+{% endblock %}
+
+{% block title %}Страница регистрации{% endblock %}
+
+<!-- Content -->
+{% block content %}
+    <!-- Reg form -->
+    <div class="parralax-wrap">
+      <section class="check-in user-box">
+        <h3>Регистрация</h3>
+        <div class="wrapper">
+          <form class="reg" method="post">
+            {% csrf_token %}
+            <div class="l-side">
+              {% for field in form.visible_fields|slice:":3" %}
+                  <div class="reg__item">
+                    <p>{{ field.errors }}</p>
+                      <label for="{{ field.id_for_label }}" class="item__label">{{ field.label }}</label>
+                      {{ field }}
+                  </div>
+              {% endfor %}
+            </div>
+            <div class="reg__item">
+                {% for field in form.visible_fields|slice:"3:" %}
+                  <div class="reg__item">
+                    <p>{{ field.errors }}</p>
+                      <label for="{{ field.id_for_label }}" class="item__label">{{ field.label }}</label>
+                      {{ field }}
+                  </div>
+              {% endfor %}
+            </div>
+          </div>
+          <input type="submit" value="Зарегистрироваться" class="btn-login"/>
+          </form>
+      </section>
+    </div>
+
+  <script src="https://unpkg.com/imask"></script>
+  <script src="{% static 'petapp/page/regpage/reg.js' %}"></script>
+{% endblock %}
