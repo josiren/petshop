@@ -30,7 +30,17 @@
           </ul>
         </nav>
         <div class="header__buttons">
-          <img src="{% static 'petapp/page/mainpage/img/header/alarm.svg' %}" alt="alarm">
+          <!-- Modal window -->
+          <div class="alarm-modal">
+            <img src="{% static 'petapp/page/mainpage/img/header/alarm.svg' %}" class="alarm" alt="alarm">
+            <div class="modal__window">
+              <h3>Уведомления</h3>
+              <p>здесь пока ничего нет</p>
+            </div>
+            <div class="modal__close">
+            </div>
+          </div>
+          <script src="{% static 'petapp/components/navbar/js/navbar.js' %}"></script>
           <a href="{% url 'basket' %}"><img src="{% static 'petapp/page/mainpage/img/header/basket.svg' %}" alt="basket"
               class="basket-page"></a>
           <a href="{% url 'auth' %}"><img src="{% static 'petapp/page/mainpage/img/header/person.svg' %}" alt="person"

@@ -55,10 +55,15 @@
   padding-right: 16px;
   padding-left: 16px;
 }
-.auth p,
-.reg p {
+.auth a,
+.reg a {
   color: var(--six-text-color);
   text-align: center;
+  transition: 0.2s;
+}
+.auth a:hover,
+.reg a:hover {
+  text-shadow: 1px 2px 10px #57a09d;
 }
 
 input.btn-login {
