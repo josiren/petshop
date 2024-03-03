@@ -15,6 +15,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf.urls.static import static
+from django.conf import settings
 from django.urls import path
 from petapp import views
 
@@ -24,4 +26,10 @@ urlpatterns = [
     path('catalog/', views.catalog, name='catalog'),
     path('contact/', views.contact, name='contact'),
     path('about/', views.about, name='about'),
-]
+    path('auth/', views.email_login, name='auth'),
+    path('logout/', views.logout_view, name='logout'),
+    path('reg/', views.reg, name='reg'),
+    path('basket/', views.basket, name='basket'),
+    path('user/', views.user, name='user'),
+    path('user/edit/', views.user_edit, name='user_edit'),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
