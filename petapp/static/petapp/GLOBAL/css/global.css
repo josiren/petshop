@@ -75,8 +75,14 @@ input {
   padding-block: 0px;
   background-color: transparent;
   padding-inline: 0px;
-  outline: none;
+  outline: none !important;
   cursor: pointer;
-  border: none;
+  border: none !important;
+  outline-offset: 0 !important;
   box-sizing: border-box;
+}
+input:focus, input:active {
+  border: none !important;
+  outline-offset: 0 !important;
+  outline: none !important;
 }/*# sourceMappingURL=global.css.map */

@@ -9,14 +9,20 @@
 
 {% endblock %}
 
-{% block title %}Страница регистрации{% endblock %}
+{% block title %}Страница редактированние данных{% endblock %}
 
 <!-- Content -->
 {% block content %}
 <!-- Reg form -->
 <div class="parralax-wrap">
   <section class="check-in user-box">
-    <input type="image" src="{% static 'petapp/page/userpage/img/avatar.png' %}" alt="avatar" class="user__img">
+    <form class="form__add-image">
+      <img src="{% static 'petapp/page/userpage/img/avatar.png' %}" alt="avatar" class="user__img">
+      <label class="input-file">
+        <input type="file" name="file" accept=".jpg, .jpeg, .png">
+        <span>Изменить фото</span>
+      </label>
+    </form>
     <div class="wrapper">
       <form class="edit-info reg">
         <div class="l-side">
@@ -35,7 +41,7 @@
         </div>
         <!-- Right side -->
         <div class="r-side">
-          <div class="reg__item">
+          <div class="reg__item --phone">
             <label for="phone" class="item__label">Номер телефона</label>
             <input type="phone" name="phone" id="phone" />
           </div>
@@ -48,9 +54,11 @@
             <input type="address" name="address" id="address" />
           </div>
         </div>
-        <input type="submit" value="Сохранить" class="btn-login" />
+        <div class="form__buttons">
+          <input type="submit" value="Сохранить" class="btn-login" />
+          <a href="{% url 'user' %}" class="user-leave"><input type="button" value="Выйти"></a>
+        </div>
       </form>
-      <a href="#" class="user-leave"><input type="button" value="Выйти"></a>
     </div>
   </section>
 </div>
