@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{% static 'petapp/page/regpage/css/reg.css' %}">
+<link rel="stylesheet" href="{% static 'petapp/page/user_editpage/css/user_edit.css' %}">
+
+
+{% endblock %}
+
+{% block title %}Страница регистрации{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<!-- Reg form -->
+<div class="parralax-wrap">
+  <section class="check-in user-box">
+    <div class="wrapper">
+      <form class="edit-info reg" method="post">
+        {% csrf_token %}
+        <div class="user__img">
+          <input type="file" id="photo_avatar" name="photo_avatar" accept="image/*" style="display: none;">
+          <label for="photo_avatar">
+              <img src="{{ MEDIA_URL }}{{ customer.photo_avatar.url }}" alt="avatar" class="user__img">
+          </label>
+        </div>
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <div class="l-side">
+          <div class="reg__item">
+            <label for="surname" class="item__label">Фамилия</label>
+            <input type="surname" name="surname" id="surname" value="{{ user.last_name }}" />
+          </div>
+          <div class="reg__item">
+            <label for="name" class="item__label">Имя</label>
+            <input type="name" name="name" id="name" value="{{ user.first_name }}" />
+          </div>
+          <div class="reg__item">
+            <label for="patrynomic" class="item__label">Отчество</label>
+            <input type="patrynomic" name="patrynomic" id="patrynomic" value="{{ customer.patronymic }}" />
+          </div>
+        </div>
+        <!-- Right side -->
+        <div class="r-side">
+          <div class="reg__item">
+            <label for="phone" class="item__label">Номер телефона</label>
+            <input type="phone" name="phone" id="phone" value="{{ customer.phone }}" />
+          </div>
+          <div class="reg__item">
+            <label for="email" class="item__label">Электронная почта</label>
+            <input type="email" name="email" id="email" value="{{ user.email }}" />
+          </div>
+          <div class="reg__item">
+            <label for="address" class="item__label">Адрес</label>
+            <input type="address" name="address" id="address" value="{{ customer.address }}"/>
+          </div>
+        </div>
+        <div class="form__buttons">
+          <input type="submit" value="Сохранить" class="btn-login" />
+          <a href="{% url 'logout' %}" class="user-leave"><input type="button" value="Выйти"></a>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+<script src="https://unpkg.com/imask"></script>
+<script src="{% static 'petapp/page/regpage/reg.js' %}"></script>
+{% endblock %}

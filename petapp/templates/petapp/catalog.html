@@ -1,236 +1,50 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'petapp/GLOBAL/css/global.css' %}">
-  <link rel="stylesheet" href="{% static 'petapp/components/products/css/products.css' %}">
-  <link rel="stylesheet" href="{% static 'petapp/page/catalogpage/css/catalog.css' %}">
-  <title>Каталог</title>
+{% block head %}
 
-</head>
+<link rel="stylesheet" href="{% static 'petapp/page/catalogpage/css/catalog.css' %}">
 
-<body>
-  <div class="wrapper">
-    <div class="header__top">
-      <img src="{% static 'petapp/GLOBAL/img/logo.png' %}" alt="logo">
-      <nav class="header__nav">
-        <ul>
-          <li><a href="{% url 'home' %}" class="{{ home_page }}">Главная</a></li>
-          <li><a href="{% url 'catalog' %}" class="{{ catalog_page }}">Каталог</a></li>
-          <li><a href="{% url 'contact' %}" class="{{ contact_page }}">Контакты</a></li>
-          <li><a href="{% url 'about' %}" class="{{ about_page }}">О нас</a></li>
-        </ul>
-      </nav>
-      <div class="header__buttons">
-        <img src="{% static 'petapp/page/mainpage/img/header/alarm.svg' %}" alt="alarm">
-        <img src="{% static 'petapp/page/mainpage/img/header/basket.svg' %}" alt="basket">
-        <img src="{% static 'petapp/page/mainpage/img/header/person.svg' %}" alt="person">
-      </div>
-    </div>
-  </div>
+{% endblock %}
+
+{% block title %}Каталог{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<div class="parralax-wrap">
   <section class="products">
     <h2>Каталог</h2>
-    <div class="p__wrapper">
-      <div class="p__item">
-        <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product">
-        <div class="item__description">
-          <h4 class="item__price">989₽</h4>
-          <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
-          <div class="item__rate">
-            <img src="{% static 'petapp/page/mainpage/img/product-top/rate.svg' %}" alt="rate">
-            <h3 class="rate__text">4.9</h3>
-          </div>
-          <input type="button" class="product__add"></button>
+      {% if message %}
+        <p>{{ message }}</p>
+      {% else %}
+        <div class="p__wrapper">
+          {% for product in products %}
+            <div class="p__item">
+              <img src="{{ MEDIA_URL }}{{ product.photo_product.url }}" alt="product" class="title">
+              <div class="item__description">
+                <h4 class="item__price">{{ product.price }}₽</h4>
+                <p class="item__name"><span>{{ product.product_name }}</span> / {{ product.category }} для 
+                  {% for animal_type in product.animal_type.all %}
+                      {{ animal_type.name }} 
+                  {% endfor %}
+                  {{ product.weight }} kg</p>
+                <div class="item__rate">
+                  <img src="{% static 'petapp/GLOBAL/img/rating/rate.svg' %}" alt="rate">
+                  <h3 class="rate__text">
+                    {% if product.rating_set.all %}
+                      {% for rating in product.rating_set.all %}
+                        {{ rating.rating }}
+                      {% endfor %}
+                    {% else %}
+                      0
+                    {% endif %}</h3>
+                </div>
+                <input type="button" class="product__add"></button>
+              </div>
+            </div>
+          {% endfor %}
         </div>
-      </div>
-      <div class="p__item">
-        <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product">
-        <div class="item__description">
-          <h4 class="item__price">989₽</h4>
-          <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
-          <div class="item__rate">
-            <img src="{% static 'petapp/page/mainpage/img/product-top/rate.svg' %}" alt="rate">
-            <h3 class="rate__text">4.9</h3>
-          </div>
-          <input type="button" class="product__add"></button>
-        </div>
-      </div>
-      <div class="p__item">
-        <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product">
-        <div class="item__description">
-          <h4 class="item__price">989₽</h4>
-          <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
-          <div class="item__rate">
-            <img src="{% static 'petapp/page/mainpage/img/product-top/rate.svg' %}" alt="rate">
-            <h3 class="rate__text">4.9</h3>
-          </div>
-          <input type="button" class="product__add"></button>
-        </div>
-      </div>
-      <div class="p__item">
-        <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product">
-        <div class="item__description">
-          <h4 class="item__price">989₽</h4>
-          <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
-          <div class="item__rate">
-            <img src="{% static 'petapp/page/mainpage/img/product-top/rate.svg' %}" alt="rate">
-            <h3 class="rate__text">4.9</h3>
-          </div>
-          <input type="button" class="product__add"></button>
-        </div>
-      </div>
-      <div class="p__item">
-        <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product">
-        <div class="item__description">
-          <h4 class="item__price">989₽</h4>
-          <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
-          <div class="item__rate">
-            <img src="{% static 'petapp/page/mainpage/img/product-top/rate.svg' %}" alt="rate">
-            <h3 class="rate__text">4.9</h3>
-          </div>
-          <input type="button" class="product__add"></button>
-        </div>
-      </div>
-      <div class="p__item">
-        <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product">
-        <div class="item__description">
-          <h4 class="item__price">989₽</h4>
-          <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
-          <div class="item__rate">
-            <img src="{% static 'petapp/page/mainpage/img/product-top/rate.svg' %}" alt="rate">
-            <h3 class="rate__text">4.9</h3>
-          </div>
-          <input type="button" class="product__add"></button>
-        </div>
-      </div>
-      <div class="p__item">
-        <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product">
-        <div class="item__description">
-          <h4 class="item__price">989₽</h4>
-          <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
-          <div class="item__rate">
-            <img src="{% static 'petapp/page/mainpage/img/product-top/rate.svg' %}" alt="rate">
-            <h3 class="rate__text">4.9</h3>
-          </div>
-          <input type="button" class="product__add"></button>
-        </div>
-      </div>
-      <div class="p__item">
-        <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product">
-        <div class="item__description">
-          <h4 class="item__price">989₽</h4>
-          <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
-          <div class="item__rate">
-            <img src="{% static 'petapp/page/mainpage/img/product-top/rate.svg' %}" alt="rate">
-            <h3 class="rate__text">4.9</h3>
-          </div>
-          <input type="button" class="product__add"></button>
-        </div>
-      </div>
-      <div class="p__item">
-        <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product">
-        <div class="item__description">
-          <h4 class="item__price">989₽</h4>
-          <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
-          <div class="item__rate">
-            <img src="{% static 'petapp/page/mainpage/img/product-top/rate.svg' %}" alt="rate">
-            <h3 class="rate__text">4.9</h3>
-          </div>
-          <input type="button" class="product__add"></button>
-        </div>
-      </div>
-      <div class="p__item">
-        <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product">
-        <div class="item__description">
-          <h4 class="item__price">989₽</h4>
-          <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
-          <div class="item__rate">
-            <img src="{% static 'petapp/page/mainpage/img/product-top/rate.svg' %}" alt="rate">
-            <h3 class="rate__text">4.9</h3>
-          </div>
-          <input type="button" class="product__add"></button>
-        </div>
-      </div>
-      <div class="p__item">
-        <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product">
-        <div class="item__description">
-          <h4 class="item__price">989₽</h4>
-          <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
-          <div class="item__rate">
-            <img src="{% static 'petapp/page/mainpage/img/product-top/rate.svg' %}" alt="rate">
-            <h3 class="rate__text">4.9</h3>
-          </div>
-          <input type="button" class="product__add"></button>
-        </div>
-      </div>
-      <div class="p__item">
-        <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product">
-        <div class="item__description">
-          <h4 class="item__price">989₽</h4>
-          <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
-          <div class="item__rate">
-            <img src="{% static 'petapp/page/mainpage/img/product-top/rate.svg' %}" alt="rate">
-            <h3 class="rate__text">4.9</h3>
-          </div>
-          <input type="button" class="product__add"></button>
-        </div>
-      </div>
-    </div>
+      {% endif %}
   </section>
-  </div>
-
-  <!-- Background paw1 -->
-  <img src="{% static 'petapp/GLOBAL/img/background/paw1.png' %}" alt="paw" class="paw1">
-
-  <!-- Background paw2 -->
-  <img src="{% static 'petapp/GLOBAL/img/background/paw2.png' %}" alt="paw" class="paw2">
-
-  <!-- Background paw3 -->
-  <img src="{% static 'petapp/GLOBAL/img/background/paw3.png' %}" alt="paw" class="paw3">
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="flex-row">
-      <div class="footer__item">
-        <h3>контакты</h3>
-        <address class="item__descript">
-          <div class="item-social">
-            <img src="{% static 'petapp/page/mainpage/img/contact/city.svg' %}" alt="address">
-            <p class="social__text">ул.Гагарина 27</p>
-          </div>
-          <div class="item-social">
-            <img src="{% static 'petapp/page/mainpage/img/contact/time.svg' %}" alt="time">
-            <p class="social__text">09:00 - 20:00, ежедневно</p>
-          </div>
-        </address>
-      </div>
-      <div class="footer__item">
-        <h3>контакты</h3>
-        <address class="item__descript">
-          <div class="item-social">
-            <img src="{% static 'petapp/page/mainpage/img/contact/facebook.svg' %}" alt="facebook">
-            <p class="social__text">Facebook</p>
-          </div>
-          <div class="item-social">
-            <img src="{% static 'petapp/page/mainpage/img/contact/twitter.svg' %}" alt="twitter">
-            <p class="social__text">Twitter</p>
-          </div>
-          <div class="item-social">
-            <img src="{% static 'petapp/page/mainpage/img/contact/instagram.svg' %}" alt="instagram">
-            <p class="social__text">Instagram</p>
-          </div>
-          <div class="item-social">
-            <img src="{% static 'petapp/page/mainpage/img/contact/phone.svg' %}" alt="phone">
-            <p class="social__text">8 (800) 55-35-35</p>
-          </div>
-        </address>
-      </div>
-    </div>
-    <p class="signature">&copy; 2024 <span class="s-regular">Зоомагазин</span> "PuffBall"</p>
-  </footer>
-</body>
-
-</html>
+</div>
+{% endblock %}
