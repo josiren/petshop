@@ -1,20 +1,16 @@
-import os
 import random
 from django.shortcuts import render
 from petapp.models import Customer
 from petapp.forms import *
 from django.db import IntegrityError
 from django.shortcuts import render, redirect
-from django.contrib.auth.views import LoginView as BaseLoginView
 from django.contrib.auth import login
 from django.contrib.auth import logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .authentication import EmailAuthBackend
-from django.core.files.images import get_image_dimensions
 from django.core.files.base import ContentFile
-from django.core.files.images import ImageFile
 
 
 # Main navigation pages
@@ -151,7 +147,6 @@ def user_edit(request):
         except ValidationError as e:
             messages.error(request, e.message)
         
-        # Validate patronymic if not empty
         patronymic = request.POST.get('patronymic')
         if patronymic:
             try:
@@ -172,21 +167,17 @@ def user_edit(request):
             customer.address = address
 
         if 'photo_avatar' in request.FILES:
-            photo_avatar = request.FILES['photo_avatar']
-            
-            upload_path = customer.photo_avatar.field.upload_to
-            file_name = photo_avatar.name
-            file_path = os.path.join(upload_path, file_name)
+            photo = request.FILES['photo_avatar']
+            if not photo.name.endswith(('.jpg', '.jpeg', '.png')):
+                messages.error(request, "Допустимы только файлы формата JPG или PNG.") 
 
-            with Image.open(photo_avatar) as image:
-                image.save(file_path, 'JPEG')
-                image.save(file_path.replace('.jpg', '.png'), 'PNG')
-            
-            if customer.photo_avatar:
-                customer.photo_avatar.delete()
-            
-            customer.photo_avatar.save(photo_avatar.name, ContentFile(photo_avatar.read()))
-            customer.save()
+            else:
+                if customer.photo_avatar:
+                    old_photo_path = customer.photo_avatar.path
+                    customer.photo_avatar.delete(save=False)
+
+                new_photo_name = f"user_{user.id}_avatar"
+                customer.photo_avatar.save(f"{new_photo_name}.jpg", ContentFile(photo.read()))
 
         if not messages.get_messages(request):
             user.save()
@@ -194,3 +185,4 @@ def user_edit(request):
             return redirect('user')
 
     return render(request, 'petapp/user_edit.html', {'user': user, 'customer': customer})
+
