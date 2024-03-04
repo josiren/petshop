@@ -17,7 +17,7 @@
 <div class="parralax-wrap">
   <section class="check-in user-box">
     <div class="wrapper">
-      <form class="edit-info reg" method="post">
+      <form class="edit-info reg" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="user__img">
           <input type="file" id="photo_avatar" name="photo_avatar" accept="image/*" style="display: none;">
