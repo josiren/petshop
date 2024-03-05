@@ -15,7 +15,15 @@ from django.core.files.base import ContentFile
 
 # Main navigation pages
 def index(request):
-    return render(request, 'petapp/main.html')
+    top_rated_products = Product.objects.all().order_by('-rating')[:3]
+    
+    for product in top_rated_products:
+        product.product_name = product.product_name
+        product.category = product.category
+        product.animal_type = product.animal_type.all()
+        product.rating = Rating.objects.get(product=product).rating
+        
+    return render(request, 'petapp/main.html', {'top_rated_products': top_rated_products})
 
 def catalog(request):
     product_name = Product.objects.all()
