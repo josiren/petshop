@@ -15,6 +15,7 @@
 <div class="parralax-wrap">
   <section class="login user-box">
     <div class="wrapper">
+<<<<<<< HEAD
       <form class="auth"  method="post">
         {% csrf_token %}
         <h3>Авторизация</h3>
@@ -32,6 +33,28 @@
       </div>
       <input type="submit" value="Войти" class="btn-login">
       </form>
+=======
+      <form class="auth">
+        <h3>Авторизация</h3>
+        <div class="auth__item">
+          <label for="email" class="item__label">Электронная почта</label>
+          <input type="email" name="email" id="email">
+        </div>
+        <div class="auth__item">
+          <label for="password" class="item__label">Пароль</label>
+          <input type="password" name="password" id="password">
+        </div>
+        <div class="auth__item">
+          <label for="password" class="item__label">Повторите пароль</label>
+          <input type="password" name="password" id="password">
+        </div>
+        <a href="{% url 'reg' %}">
+          Нет аккаунта? Зарегистрируйтесь!
+        </a>
+      </form>
+    </div>
+    <input type="button" value="Войти" class="btn-login">
+>>>>>>> master
   </section>
 </div>
 

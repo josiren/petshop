@@ -13,6 +13,7 @@ from .authentication import EmailAuthBackend
 from django.core.files.base import ContentFile
 from django.db.models import Avg
 
+<<<<<<< HEAD
 
 # Main navigation pages
 def index(request):
@@ -31,6 +32,16 @@ def catalog(request):
         return render(request, 'petapp/catalog.html', {'message': message})
 
     return render(request, 'petapp/catalog.html', {'products': product_name, 'category' : category, 'animal_type' : animal_type, 'rating' : rating})
+=======
+# Create your views here.
+
+# Main navigation pages
+def index(request):
+    return render(request, 'petapp/main.html')
+
+def catalog(request):
+    return render(request, 'petapp/catalog.html')
+>>>>>>> master
 
 def contact(request):
     return render(request, 'petapp/contact.html')
@@ -40,6 +51,7 @@ def about(request):
 
 
 # Auth and Reg pages
+<<<<<<< HEAD
 def reg(request):
     if request.method == 'POST':
         auth_form = createUserForm(request.POST)
@@ -108,6 +120,13 @@ def logout_view(request):
     logout(request)
     return redirect('home')
 
+=======
+def auth(request):
+    return render(request, 'petapp/auth.html')
+
+def reg(request):
+    return render(request, 'petapp/reg.html')
+>>>>>>> master
 
 # Bakset page 
 def basket(request):
@@ -115,6 +134,7 @@ def basket(request):
 
 #User page
 def user(request):
+<<<<<<< HEAD
     if request.user.is_authenticated:
         customer = Customer.objects.get(user=request.user)
         user = customer.user
@@ -189,3 +209,9 @@ def user_edit(request):
 
     return render(request, 'petapp/user_edit.html', {'user': user, 'customer': customer})
 
+=======
+    return render(request, 'petapp/user.html')
+
+def user_edit(request):
+    return render(request, 'petapp/user_edit.html')
+>>>>>>> master

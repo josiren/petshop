@@ -1,1 +1,59 @@
-/*# sourceMappingURL=contact.css.map */
+.f-alt {
+  background-color: transparent;
+  margin-top: 74px;
+  height: auto;
+  z-index: 1;
+}
+.f-alt .footer__item {
+  padding-top: 0px;
+  margin-top: 30px;
+}
+
+.flex-row {
+  width: 100%;
+  justify-content: space-between;
+  max-width: 603px;
+}
+
+.flex-row:nth-last-child(2) {
+  display: none;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 23px;
+}
+
+.buy-us {
+  padding-bottom: 0px;
+  background-image: url(../img/bg_auth.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  margin-top: 45px;
+}
+.buy-us input.login {
+  display: flex;
+  align-self: flex-start;
+  margin-top: 40px;
+}
+.buy-us h2, .buy-us p {
+  text-align: left;
+  padding: 0;
+}
+.buy-us h2, .buy-us p, .buy-us input {
+  margin-left: 100px;
+}
+
+.footer {
+  height: auto;
+}
+.footer p.signature {
+  padding: 44px;
+}
+
+.parralax-wrap {
+  padding-bottom: 63px;
+}/*# sourceMappingURL=contact.css.map */

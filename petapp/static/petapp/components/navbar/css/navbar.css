@@ -5,6 +5,42 @@
   margin-top: 45px;
   justify-content: space-between;
 }
+.header__top .alarm-modal {
+  position: relative;
+}
+.header__top .alarm-modal .modal__window {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  flex-direction: column;
+  z-index: 5;
+  width: 465px;
+  min-height: 211px;
+  height: auto;
+  margin-left: -30.5rem;
+  border-radius: 10px;
+  margin-top: 15px;
+  max-height: 506px;
+  font-family: "Gravity Regular", sans-serif;
+  background-color: var(--modal-bg-color);
+  padding: 25px;
+  transition: 0.5s;
+  transform: translateY(-25%);
+}
+.header__top .alarm-modal .modal__window.open {
+  opacity: 1;
+  transform: translateY(0%);
+  visibility: visible;
+}
+.header__top .alarm-modal .modal__window h3 {
+  color: #323232;
+  font-size: 16px;
+}
+.header__top .alarm-modal .modal__window p {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 12px;
+}
 .header__top .header__nav {
   margin-left: 52px;
 }
@@ -50,4 +86,7 @@
 .header__top .header__buttons {
   display: flex;
   gap: 51px;
+}
+.header__top .active-color-swap {
+  filter: invert(72%) sepia(33%) saturate(3647%) hue-rotate(313deg) brightness(94%) contrast(118%);
 }/*# sourceMappingURL=navbar.css.map */

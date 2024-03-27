@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{% static 'petapp/page/basketpage/css/basket.css' %}">
+
+{% endblock %}
+
+{% block title %}Моя корзина{% endblock %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- Section - basket -->
+<section class="basket products">
+  <h2>Моя корзина</h2>
+  <!-- <h3 class="empty-text">здесь пока пусто</h3> 
+    если ничего нет в корзине -->
+  <div class="p__wrapper">
+    <div class="p__item">
+      <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product" class="title">
+      <div class="item__description">
+        <h4 class="item__price">989₽</h4>
+        <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
+        <div class="rating__group">
+          <input class="rating__star" type="radio" value="1" aria-label="Ужасно">
+          <input class="rating__star" type="radio" value="2" aria-label="Сносно">
+          <input class="rating__star" type="radio" value="3" aria-label="Нормально">
+          <input class="rating__star" type="radio" value="4" aria-label="Хорошо">
+          <input class="rating__star" type="radio" value="5" aria-label="Отлично">
+        </div>
+      </div>
+    </div>
+    <div class="p__item">
+      <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product" class="title">
+      <div class="item__description">
+        <h4 class="item__price">989₽</h4>
+        <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
+        <div class="rating__group">
+          <input class="rating__star" type="radio" value="1" aria-label="Ужасно">
+          <input class="rating__star" type="radio" value="2" aria-label="Сносно">
+          <input class="rating__star" type="radio" value="3" aria-label="Нормально">
+          <input class="rating__star" type="radio" value="4" aria-label="Хорошо">
+          <input class="rating__star" type="radio" value="5" aria-label="Отлично">
+        </div>
+      </div>
+    </div>
+    <div class="p__item">
+      <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product" class="title">
+      <div class="item__description">
+        <h4 class="item__price">989₽</h4>
+        <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
+        <div class="rating__group">
+          <input class="rating__star" type="radio" value="1" aria-label="Ужасно">
+          <input class="rating__star" type="radio" value="2" aria-label="Сносно">
+          <input class="rating__star" type="radio" value="3" aria-label="Нормально">
+          <input class="rating__star" type="radio" value="4" aria-label="Хорошо">
+          <input class="rating__star" type="radio" value="5" aria-label="Отлично">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{% static 'petapp/page/basketpage/js/basket.js' %}" type="module"></script>
+{% endblock %}

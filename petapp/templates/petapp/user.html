@@ -7,12 +7,17 @@
 
 {% endblock %}
 
+<<<<<<< HEAD
 {% block title %}Страница пользователя{% endblock %}ы
+=======
+{% block title %}Страница пользователя{% endblock %}
+>>>>>>> master
 
 <!-- Content -->
 {% block content %}
 <!-- User info -->
 <div class="user parralax-wrap">
+<<<<<<< HEAD
   <!-- User Box -->
   <section class="user-info user-box">
     <div class="user__img">
@@ -27,6 +32,21 @@
     </div>
     <a href="{% url 'user_edit' %}" class="user-edit"><input type="button"></a>
     <a href="{% url 'logout' %}" class="user-leave"><input type="submit" value="Выйти"></a>
+=======
+
+  <!-- User Box -->
+  <section class="user-info user-box">
+    <img src="{% static 'petapp/page/userpage/img/avatar.png' %}" alt="avatar" class="user__img">
+    <div class="user__descript">
+      <h3 class="user-name">
+        Шумакова Анна Евгеньевна
+      </h3>
+      <p class="user-phone">8(951)088-52-27</p>
+      <p class="user-mail">onegina_05@mail.ru</p>
+    </div>
+    <a href="{% url 'user_edit' %}" class="user-edit"><input type="button"></a>
+    <a href="#" class="user-leave"><input type="button" value="Выйти"></a>
+>>>>>>> master
   </section>
 
   <!-- Basket Box -->

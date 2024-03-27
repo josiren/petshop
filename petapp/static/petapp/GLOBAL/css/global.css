@@ -3,14 +3,20 @@
 @import url(../../components/navbar/css/navbar.css);
 @import url(../../components/join-us/css/join-us.css);
 @import url(../../components/footer/css/footer.css);
+@import url(../../components/users-form/css/users.css);
 :root {
   --main-text-color: #000000;
   --second-text-color: #ff7269;
   --three-text-color: #555555;
-  --four--text-color: #ffffff;
+  --four-text-color: #ffffff;
+  --five-text-color: #8d8d8d;
+  --six-text-color: #43807f;
   --main-bg-color: #7bc3c2;
   --second-bg-color: #ffaaa3;
   --three-bg-color: #ffeeee;
+  --four-bg-color: #ffffff;
+  --five-bg-color: #4f9695;
+  --modal-bg-color: #f8f8f0;
   --main-bg-hover: #ea8b83;
 }
 
@@ -19,11 +25,28 @@ html {
 }
 
 body {
+  scroll-behavior: smooth;
   position: relative;
 }
 
+input[type=radio i] {
+  margin: 0;
+}
+
 .wrapper {
-  padding: 0px 25px;
+  padding: 0px calc(0px + 1.3541666667vw);
+}
+
+.global__wrapper {
+  background-image: url(../../GLOBAL/img/background/paws.svg);
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position-y: 180px;
+  background-position-x: -25px;
+}
+
+.parralax-wrap {
+  padding-bottom: 110px;
 }
 
 .flex-row {
@@ -32,25 +55,34 @@ body {
   gap: 126px;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
 h2 {
   font-family: "Gravity Regular", sans-serif;
-  font-size: 32px;
+  font-size: calc(20px + 0.625vw);
+  text-align: center;
 }
 
-img.paw1 {
-  position: absolute;
-  top: 179px;
-  left: 0;
+input {
+  display: flex;
+  padding-block: 0px;
+  background-color: transparent;
+  padding-inline: 0px;
+  outline: none !important;
+  cursor: pointer;
+  border: none !important;
+  outline-offset: 0 !important;
+  box-sizing: border-box;
 }
-
-img.paw2 {
-  position: absolute;
-  top: 1624px;
-  left: 0;
-}
-
-img.paw3 {
-  position: absolute;
-  top: 2190px;
-  left: 973.31px;
+input:focus, input:active {
+  border: none !important;
+  outline-offset: 0 !important;
+  outline: none !important;
 }/*# sourceMappingURL=global.css.map */

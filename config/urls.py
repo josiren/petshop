@@ -26,10 +26,18 @@ urlpatterns = [
     path('catalog/', views.catalog, name='catalog'),
     path('contact/', views.contact, name='contact'),
     path('about/', views.about, name='about'),
+<<<<<<< HEAD
     path('auth/', views.email_login, name='auth'),
     path('logout/', views.logout_view, name='logout'),
+=======
+    path('auth/', views.auth, name='auth'),
+>>>>>>> master
     path('reg/', views.reg, name='reg'),
     path('basket/', views.basket, name='basket'),
     path('user/', views.user, name='user'),
     path('user/edit/', views.user_edit, name='user_edit'),
+<<<<<<< HEAD
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+=======
+]
+>>>>>>> master

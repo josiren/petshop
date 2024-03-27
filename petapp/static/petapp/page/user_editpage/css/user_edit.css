@@ -1,0 +1,124 @@
+.user__img {
+  max-width: 110px;
+  max-height: 110px;
+  margin: 30px auto;
+}
+
+.edit-info {
+  max-width: 959px;
+  width: 100%;
+  gap: 0;
+  -moz-column-gap: 122px;
+       column-gap: 122px;
+  row-gap: 73px;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  .edit-info {
+    row-gap: 17px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .reg {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  .reg .reg__item {
+    gap: 3px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .reg .r-side, .reg .l-side {
+    gap: 17px;
+  }
+}
+
+.user-box {
+  min-height: 571px;
+  height: auto;
+  align-items: center;
+}
+
+input.btn-login {
+  margin-top: 0;
+  color: var(--four-text-color);
+  margin-right: 0;
+}
+@media screen and (max-width: 500px) {
+  input.btn-login {
+    padding: 7px 33px;
+    font-size: 16px;
+  }
+}
+
+.form__buttons {
+  display: flex;
+  gap: 25px;
+  margin-left: auto;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  .form__buttons {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 800500pxpx) {
+  .reg__item.--phone {
+    margin-top: 0 !important;
+  }
+}
+
+.user-leave {
+  padding-right: 25px;
+}
+@media screen and (max-width: 500px) {
+  .user-leave {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 22px 25px;
+  }
+}
+.user-leave input {
+  font-size: 15px;
+  color: var(--six-text-color);
+  transition: 0.2s;
+}
+.user-leave input:hover {
+  text-shadow: 1px 2px 10px #57a09d;
+}
+@media screen and (max-width: 500px) {
+  .user-leave input {
+    font-size: 16px;
+  }
+}
+
+.form__add-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  .form__add-image {
+    margin-top: -5.4rem;
+  }
+}
+
+.input-file span {
+  font-family: "Gravity Regular", sans-serif;
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--six-text-color);
+  transition: background-color 0.2s;
+}
+
+.input-file input[type=file] {
+  display: none;
+}/*# sourceMappingURL=user_edit.css.map */

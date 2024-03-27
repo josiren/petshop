@@ -1,118 +1,52 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'petapp/GLOBAL/css/global.css' %}">
-  <link rel="stylesheet" href="{% static 'petapp/page/aboutpage/css/about.css' %}">
-  <title>О нас</title>
+{% block head %}
 
-</head>
+<link rel="stylesheet" href="{% static 'petapp/page/aboutpage/css/about.css' %}">
 
-<body>
-  <div class="wrapper">
-    <!-- Navigation -->
-    <div class="header__top">
-      <img src="{% static 'petapp/GLOBAL/img/logo.png' %}" alt="logo">
-      <nav class="header__nav">
-        <ul>
-          <li><a href="{% url 'home' %}" class="{{ home_page }}">Главная</a></li>
-          <li><a href="{% url 'catalog' %}" class="{{ catalog_page }}">Каталог</a></li>
-          <li><a href="{% url 'contact' %}" class="{{ contact_page }}">Контакты</a></li>
-          <li><a href="{% url 'about' %}" class="{{ about_page }}">О нас</a></li>
-        </ul>
-      </nav>
-      <div class="header__buttons">
-        <img src="{% static 'petapp/page/mainpage/img/header/alarm.svg' %}" alt="alarm">
-        <img src="{% static 'petapp/page/mainpage/img/header/basket.svg' %}" alt="basket">
-        <img src="{% static 'petapp/page/mainpage/img/header/person.svg' %}" alt="person">
-      </div>
-    </div>
+{% endblock %}
 
-    <!-- Section about us -->
-    <section class="about">
-      <h2>Почему нас выбирают?</h2>
-      <div class="about__descript">
-        <p class="descript-text">Одним из ключевых преимуществ нашего зоомагазина является то, что все наши корма и
-          различные атрибуты выполнены исключительно из натуральных природных материалов. Мы понимаем, что здоровье и
-          благополучие наших питомцев - ваш приоритет, поэтому мы уделяем особое внимание выбору качественных и
-          безопасных продуктов для животных.</p>
-        <p class="descript-text">Использование натуральных материалов в изготовлении кормов и аксессуаров для животных
-          имеет ряд преимуществ. Во-первых, это способствует улучшению пищеварения у ваших питомцев. Натуральные
-          ингредиенты, такие как свежее мясо, овощи и фрукты, обеспечивают полноценное питание, необходимое для
-          поддержания здоровья и энергии животных. Более того, отсутствие искусственных красителей, ароматизаторов и
-          консервантов в наших кормах позволяет избежать потенциально вредных эффектов на здоровье питомцев.</p>
-      </div>
-    </section>
+{% block title %}О нас{% endblock %}
 
-    <!-- Section come join us -->
-    <section class="join-us">
-      <h2>Присоединяйтесь к акции PuffGift!</h2>
-      <p>Получите уникальную возможность порадовать своих любимцев! Зарегистрируйтесь<br>
-        и получите на первую покупку 25% скидку. Кроме того, акция PuffGift дает возможность получать<br>первым
-        уведомления о новинках и розыгрышах.</p>
-      <form class="go-join">
-        <input type="email" class="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="30"
-          placeholder="E-Mail" required>
-        <input type="button" class="regisration" value="Регистрация">
-      </form>
-    </section>
-
-    <!-- Background paw1 -->
-    <img src="{% static 'petapp/GLOBAL/img/background/paw1.png' %}" alt="paw" class="paw1">
-
-    <!-- Product banner -->
-    <div class="product-banner">
-      <img src="{% static 'petapp/page/aboutpage/img/banner.png' %}" alt="banner">
-    </div>
+<!-- Content -->
+{% block content %}
+<!-- Section about us -->
+<section class="about">
+  <h2>Почему нас выбирают?</h2>
+  <div class="about__descript">
+    <p class="descript-text">Одним из ключевых преимуществ нашего зоомагазина является то, что все наши корма и
+      различные атрибуты выполнены исключительно из натуральных природных материалов. Мы понимаем, что здоровье и
+      благополучие наших питомцев - ваш приоритет, поэтому мы уделяем особое внимание выбору качественных и
+      безопасных продуктов для животных.</p>
+    <p class="descript-text">Использование натуральных материалов в изготовлении кормов и аксессуаров для животных
+      имеет ряд преимуществ. Во-первых, это способствует улучшению пищеварения у ваших питомцев. Натуральные
+      ингредиенты, такие как свежее мясо, овощи и фрукты, обеспечивают полноценное питание, необходимое для
+      поддержания здоровья и энергии животных. Более того, отсутствие искусственных красителей, ароматизаторов и
+      консервантов в наших кормах позволяет избежать потенциально вредных эффектов на здоровье питомцев.</p>
   </div>
+</section>
 
-  <!-- Background paw2 -->
-  <img src="{% static 'petapp/page/aboutpage/img/paw2.png' %}" alt="paw" class="paw2">
+<!-- Section come join us -->
+<section class="join-us">
+  <h2>Присоединяйтесь к акции PuffGift!</h2>
+  <p>Получите уникальную возможность порадовать своих любимцев! Зарегистрируйтесь<br>
+    и получите на первую покупку 25% скидку. Кроме того, акция PuffGift дает возможность получать<br>первым
+    уведомления о новинках и розыгрышах.</p>
+  <form class="go-join">
+    <input type="email" class="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="30" placeholder="E-Mail"
+      required>
+    <input type="button" class="regisration" value="Регистрация">
+  </form>
+</section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="flex-row">
-      <div class="footer__item">
-        <h3>адрес</h3>
-        <address class="item__descript">
-          <div class="item-social">
-            <img src="{% static 'petapp/page/mainpage/img/contact/city.svg' %}" alt="address">
-            <p class="social__text">ул.Гагарина 27</p>
-          </div>
-          <div class="item-social">
-            <img src="{% static 'petapp/page/mainpage/img/contact/time.svg' %}" alt="time">
-            <p class="social__text">09:00 - 20:00, ежедневно</p>
-          </div>
-        </address>
-      </div>
-      <div class="footer__item">
-        <h3>контакты</h3>
-        <address class="item__descript">
-          <div class="item-social">
-            <img src="{% static 'petapp/page/mainpage/img/contact/facebook.svg' %}" alt="facebook">
-            <p class="social__text">Facebook</p>
-          </div>
-          <div class="item-social">
-            <img src="{% static 'petapp/page/mainpage/img/contact/twitter.svg' %}" alt="twitter">
-            <p class="social__text">Twitter</p>
-          </div>
-          <div class="item-social">
-            <img src="{% static 'petapp/page/mainpage/img/contact/instagram.svg' %}" alt="instagram">
-            <p class="social__text">Instagram</p>
-          </div>
-          <div class="item-social">
-            <img src="{% static 'petapp/page/mainpage/img/contact/phone.svg' %}" alt="phone">
-            <p class="social__text">8 (800) 55-35-35</p>
-          </div>
-        </address>
-      </div>
-    </div>
-    <p class="signature">&copy; 2024 <span class="s-regular">Зоомагазин</span> "PuffBall"</p>
-  </footer>
 
-</body>
+<!-- Product banner -->
+<div class="parralax-wrap">
+  <div class="product-banner">
+    <img src="{% static 'petapp/page/aboutpage/img/banner.png' %}" alt="banner">
+  </div>
+</div>
+</div>
 
-</html>
+{% endblock %}
