@@ -7,12 +7,32 @@
 
 {% endblock %}
 
+<<<<<<< HEAD
+{% block title %}Страница пользователя{% endblock %}ы
+=======
 {% block title %}Страница пользователя{% endblock %}
+>>>>>>> master
 
 <!-- Content -->
 {% block content %}
 <!-- User info -->
 <div class="user parralax-wrap">
+<<<<<<< HEAD
+  <!-- User Box -->
+  <section class="user-info user-box">
+    <div class="user__img">
+      <img src="{{ MEDIA_URL }}{{ customer.photo_avatar.url }}" alt="avatar" class="user__img">
+    </div>
+    <div class="user__descript">
+      <h3 class="user-name">
+        {{ user.first_name }} {{ user.last_name }} {{ customer.patronymic }}
+      </h3>
+      <p class="user-phone">{{ customer.phone }}</p>
+      <p class="user-mail">{{ user.email }}</p>
+    </div>
+    <a href="{% url 'user_edit' %}" class="user-edit"><input type="button"></a>
+    <a href="{% url 'logout' %}" class="user-leave"><input type="submit" value="Выйти"></a>
+=======
 
   <!-- User Box -->
   <section class="user-info user-box">
@@ -26,6 +46,7 @@
     </div>
     <a href="{% url 'user_edit' %}" class="user-edit"><input type="button"></a>
     <a href="#" class="user-leave"><input type="button" value="Выйти"></a>
+>>>>>>> master
   </section>
 
   <!-- Basket Box -->

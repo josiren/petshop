@@ -16,6 +16,31 @@
       <section class="check-in user-box">
         <h3>Регистрация</h3>
         <div class="wrapper">
+<<<<<<< HEAD
+          <form class="reg" method="post">
+            {% csrf_token %}
+            <div class="l-side">
+              {% for field in form.visible_fields|slice:":3" %}
+                  <div class="reg__item">
+                    <p>{{ field.errors }}</p>
+                      <label for="{{ field.id_for_label }}" class="item__label">{{ field.label }}</label>
+                      {{ field }}
+                  </div>
+              {% endfor %}
+            </div>
+            <div class="reg__item">
+                {% for field in form.visible_fields|slice:"3:" %}
+                  <div class="reg__item">
+                    <p>{{ field.errors }}</p>
+                      <label for="{{ field.id_for_label }}" class="item__label">{{ field.label }}</label>
+                      {{ field }}
+                  </div>
+              {% endfor %}
+            </div>
+          </div>
+          <input type="submit" value="Зарегистрироваться" class="btn-login"/>
+          </form>
+=======
           <form class="reg">
             <div class="l-side">
               <div class="reg__item">
@@ -49,6 +74,7 @@
           </form>
         </div>
         <input type="button" value="Зарегистрироваться" class="btn-login" />
+>>>>>>> master
       </section>
     </div>
 

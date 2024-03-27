@@ -22,6 +22,49 @@
 </div>
 
 <!-- Section popular product -->
+<<<<<<< HEAD
+{% if top_rated_products %}
+<section class="swiper">
+    <h2>Популярное</h2>
+    <div class="swiper-wrapper">
+        {% for product in top_rated_products %}
+        <div class="swiper-slide">
+            <img src="{{ MEDIA_URL }}{{ product.photo_product.url }}" alt="product">
+            <div class="item__description">
+                <h4 class="item__price">{{ product.price }}₽</h4>
+                <p class="item__name"><span>{{ product.product_name }}</span> / {{ product.category }} для {% for animal_type in product.animal_type.all %}
+                    {{ animal_type.name }} 
+                {% endfor %}
+                {{ product.weight }} kg</p>
+                <div class="item__rate">
+                    <img src="{% static 'petapp/GLOBAL/img/rating/rate.svg' %}" alt="rate">
+                    <h3 class="rate__text">
+                        {% if product.avg_rating %}
+                          {{ product.avg_rating }}
+                        {% else %}
+                          0
+                        {% endif %}
+                      </h3>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+
+<!-- Section come join us -->
+<section class="join-us">
+    <h2>Присоединяйтесь к акции PuffGift!</h2>
+    <p>Получите уникальную возможность порадовать своих любимцев! Зарегистрируйтесь<br>
+        и получите на первую покупку 25% скидку. Кроме того, акция PuffGift дает возможность получать<br>первым
+        уведомления о новинках и розыгрышах.</p>
+    <form class="go-join" action="{% url 'reg' %}" method="get">
+        <input type="email" class="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="30"
+            placeholder="E-Mail" required>
+        <input type="submit" class="regisration" value="Регистрация">
+=======
 <section class="swiper">
     <h2>Популярное</h2>
     <div class="swiper-wrapper">
@@ -107,6 +150,7 @@
             <input type="button" class="regisration" value="Регистрация">
         </a>
 
+>>>>>>> master
     </form>
 </section>
 
@@ -129,4 +173,8 @@
 
 
 <script src="{% static 'petapp/page/mainpage/js/main.js' %}" type="module"></script>
+<<<<<<< HEAD
 {% endblock %}
+=======
+{% endblock %}
+>>>>>>> master
