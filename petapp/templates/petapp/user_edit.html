@@ -9,13 +9,18 @@
 
 {% endblock %}
 
+<<<<<<< HEAD
 {% block title %}Страница регистрации{% endblock %}
+=======
+{% block title %}Страница редактированние данных{% endblock %}
+>>>>>>> master
 
 <!-- Content -->
 {% block content %}
 <!-- Reg form -->
 <div class="parralax-wrap">
   <section class="check-in user-box">
+<<<<<<< HEAD
     <div class="wrapper">
       <form class="edit-info reg" method="post" enctype="multipart/form-data">
         {% csrf_token %}
@@ -44,10 +49,34 @@
           <div class="reg__item">
             <label for="patrynomic" class="item__label">Отчество</label>
             <input type="patrynomic" name="patrynomic" id="patrynomic" value="{{ customer.patronymic }}" />
+=======
+    <form class="form__add-image">
+      <img src="{% static 'petapp/page/userpage/img/avatar.png' %}" alt="avatar" class="user__img">
+      <label class="input-file">
+        <input type="file" name="file" accept=".jpg, .jpeg, .png">
+        <span>Изменить фото</span>
+      </label>
+    </form>
+    <div class="wrapper">
+      <form class="edit-info reg">
+        <div class="l-side">
+          <div class="reg__item">
+            <label for="surname" class="item__label">Фамилия</label>
+            <input type="surname" name="surname" id="surname" />
+          </div>
+          <div class="reg__item">
+            <label for="name" class="item__label">Имя</label>
+            <input type="name" name="name" id="name" />
+          </div>
+          <div class="reg__item">
+            <label for="patrynomic" class="item__label">Отчество</label>
+            <input type="patrynomic" name="patrynomic" id="patrynomic" />
+>>>>>>> master
           </div>
         </div>
         <!-- Right side -->
         <div class="r-side">
+<<<<<<< HEAD
           <div class="reg__item">
             <label for="phone" class="item__label">Номер телефона</label>
             <input type="phone" name="phone" id="phone" value="{{ customer.phone }}" />
@@ -59,11 +88,28 @@
           <div class="reg__item">
             <label for="address" class="item__label">Адрес</label>
             <input type="address" name="address" id="address" value="{{ customer.address }}"/>
+=======
+          <div class="reg__item --phone">
+            <label for="phone" class="item__label">Номер телефона</label>
+            <input type="phone" name="phone" id="phone" />
+          </div>
+          <div class="reg__item">
+            <label for="email" class="item__label">Электронная почта</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="reg__item">
+            <label for="address" class="item__label">Адрес</label>
+            <input type="address" name="address" id="address" />
+>>>>>>> master
           </div>
         </div>
         <div class="form__buttons">
           <input type="submit" value="Сохранить" class="btn-login" />
+<<<<<<< HEAD
           <a href="{% url 'logout' %}" class="user-leave"><input type="button" value="Выйти"></a>
+=======
+          <a href="{% url 'user' %}" class="user-leave"><input type="button" value="Выйти"></a>
+>>>>>>> master
         </div>
       </form>
     </div>
@@ -71,4 +117,8 @@
 </div>
 <script src="https://unpkg.com/imask"></script>
 <script src="{% static 'petapp/page/regpage/reg.js' %}"></script>
+<<<<<<< HEAD
 {% endblock %}
+=======
+{% endblock %}
+>>>>>>> master

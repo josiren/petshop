@@ -1,9 +1,5 @@
-.header {
-  padding: 0px calc(50% - 734px);
-  display: flex;
-  flex-direction: column;
-}
 .header__main {
+  padding: 0px calc(50% - 734px);
   display: flex;
   margin-top: 100px;
   justify-content: space-between;
@@ -18,7 +14,7 @@
   max-width: 677px;
 }
 .header__main .l-side h1 {
-  font-size: 40px;
+  font-size: calc(24px + 0.8333333333vw);
   line-height: 45px;
   letter-spacing: 1.9px;
 }
@@ -26,7 +22,7 @@
   color: var(--second-text-color);
 }
 .header__main .l-side p {
-  font-size: 24px;
+  font-size: calc(14px + 0.5208333333vw);
   margin-top: 26px;
   line-height: 29px;
   letter-spacing: 0.9px;
@@ -45,6 +41,58 @@ img.paw2 {
   position: absolute;
   top: 1624px;
   left: 0;
+}
+
+.swiper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin-top: 248px;
+  font-family: "Gravity Regular", sans-serif;
+}
+.swiper .swiper-wrapper {
+  margin-top: 87px;
+  z-index: 2;
+}
+.swiper .swiper-wrapper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+}
+.swiper .swiper-wrapper .item__description {
+  margin-top: 15px;
+  margin-left: 5px;
+  height: 142px;
+  display: flex;
+  flex-direction: column;
+}
+.swiper .swiper-wrapper .item__description .item__price {
+  font-size: calc(14px + 0.5208333333vw);
+}
+.swiper .swiper-wrapper .item__description .item__name {
+  margin-top: 12px;
+  font-size: calc(12px + 0.5208333333vw);
+  max-width: 200px;
+  color: var(--three-text-color);
+}
+.swiper .swiper-wrapper .item__description .item__name span {
+  color: var(--main-text-color);
+}
+.swiper .swiper-wrapper .item__description .item__rate {
+  margin-top: auto;
+  display: flex;
+  gap: 11px;
+  font-size: calc(12px + 0.5208333333vw);
+  align-items: center;
+}
+@media (max-width: 1300px) {
+  .swiper .swiper-wrapper .item__description .item__rate {
+    margin-top: 21px;
+  }
+}
+.swiper .swiper-wrapper .item__description .item__rate img {
+  max-width: 100%;
+  width: calc(20px + 0.5208333333vw);
 }
 
 .choose-us {
@@ -90,13 +138,6 @@ img.paw2 {
   margin-top: 55px;
   max-width: 100%;
   height: auto;
-  width: auto\5 ;
-  min-height: 427px;
-  min-width: 706px;
-}
-
-img.paw3 {
-  position: absolute;
-  top: 2190px;
-  left: 973.31px;
+  min-width: 340px;
+  min-height: 198px;
 }/*# sourceMappingURL=main.css.map */

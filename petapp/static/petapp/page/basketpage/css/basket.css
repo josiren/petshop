@@ -1,0 +1,57 @@
+.basket {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 150px;
+}
+.basket h3.empty-text {
+  font-family: "Gravity Regular", sans-serif;
+  font-size: 32px;
+  margin-top: 198px;
+  color: var(--five-text-color);
+}
+.basket .rating__group {
+  position: relative;
+  width: 10em;
+  height: 2em;
+  margin-top: 20px;
+  background-image: url(../../../GLOBAL/img/rating/rate.svg);
+  background-size: 2em auto;
+  background-repeat: repeat-x;
+}
+.basket .rating__group .rating__star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  font-size: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.basket .rating__group .rating__star:hover, .basket .rating__group .rating__star:checked {
+  background-image: url(../../../GLOBAL/img/rating/rate-checked.svg);
+}
+:hover ~ .basket .rating__group .rating__star {
+  background-image: url(../../../GLOBAL/img/rating/rate.svg);
+}
+.basket .rating__group .rating__star:nth-of-type(1) {
+  z-index: 5;
+  width: 2em;
+}
+.basket .rating__group .rating__star:nth-of-type(2) {
+  z-index: 4;
+  width: 4em;
+}
+.basket .rating__group .rating__star:nth-of-type(3) {
+  z-index: 3;
+  width: 6em;
+}
+.basket .rating__group .rating__star:nth-of-type(4) {
+  z-index: 2;
+  width: 8em;
+}
+.basket .rating__group .rating__star:nth-of-type(5) {
+  z-index: 1;
+  width: 10em;
+}/*# sourceMappingURL=basket.css.map */

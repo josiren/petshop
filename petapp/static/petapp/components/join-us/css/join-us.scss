@@ -1,5 +1,6 @@
 // Section come join us
-.join-us {
+.join-us,
+.buy-us {
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -12,7 +13,7 @@
   padding-bottom: 46px;
   min-height: 263px;
   border-radius: 10px;
-  color: var(--four--text-color);
+  color: var(--four-text-color);
   h2 {
     margin-top: 46px;
     letter-spacing: 1px;
@@ -33,41 +34,42 @@
     align-items: center;
     position: relative;
     justify-content: space-between;
-    &::before{
+    &::before {
       content: "";
-      margin: 0 3px;
       top: 47.5px;
       position: absolute;
       width: 100%;
       height: 1.5px;
-      background-color: var(--main-text-color);
+      background-color: var(--five-bg-color);
     }
     input.email {
       background-color: transparent;
       border: none;
       font-family: "Gravity Light", sans-serif;
-      font-size: 23px;
+      font-size: 20px;
       outline: none;
       width: 50.56%;
+      color: var(--three-text-color);
       &::placeholder {
+        font-family: "Gravity UltraLight", sans-serif;
         color: rgba($color: #000000, $alpha: 0.4);
       }
     }
-    input.regisration {
-      font-family: "Gravity Regular", sans-serif;
-      font-size: 20px;
-      color: var(--four--text-color);
-      background-color: var(--second-bg-color);
-      padding: 15px 38px;
-      border: none;
-      margin-top: -16px;
-      border-radius: 10px;
-      transition: background-color 0.2s linear;
-      cursor: pointer;
-      &:hover{
-        background-color: var(--main-bg-hover);
-      }
+  }
+  input.regisration,
+  input.login {
+    font-family: "Gravity Regular", sans-serif;
+    font-size: 20px;
+    color: var(--four-text-color);
+    background-color: var(--second-bg-color);
+    padding: 15px 38px;
+    border: none;
+    margin-top: -16px;
+    border-radius: 10px;
+    transition: background-color 0.2s linear;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--main-bg-hover);
     }
   }
- 
 }

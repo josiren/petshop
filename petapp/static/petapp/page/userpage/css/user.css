@@ -1,0 +1,117 @@
+.parralax-wrap {
+  padding-bottom: 206px;
+  display: flex;
+  margin: 74px auto;
+  max-width: 1233px;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.user-box {
+  margin: 0;
+  background-image: none;
+  height: 287px;
+  flex-direction: row;
+  max-width: none;
+  width: 100%;
+  padding-left: calc(30px + 3.2291666667vw);
+  align-items: center;
+}
+
+.basket.user-box,
+.delivery.user-box {
+  flex: 1 1;
+  padding-left: 62px;
+  min-width: 300px;
+}
+
+.user-info {
+  position: relative;
+  gap: 42px;
+}
+.user-info .user__img {
+  max-width: 110px;
+  max-height: 110px;
+}
+.user-info .user__descript {
+  font-family: "Gravity Light", sans-serif;
+  color: var(--four-text-color);
+  display: flex;
+  font-size: 18px;
+  flex-direction: column;
+}
+.user-info .user__descript .user-name {
+  font-family: "Gravity Regular", sans-serif;
+  font-size: 24px;
+}
+.user-info .user__descript .user-phone {
+  margin-top: 15px;
+}
+.user-info .user__descript .user-mail {
+  margin-top: 5px;
+}
+.user-info .user-edit {
+  background-image: url(../img/edit.svg);
+  max-width: 25px;
+  height: 25px;
+  flex: 1 1;
+  background-repeat: no-repeat;
+  margin-top: -52px;
+  margin-left: -25px;
+}
+.user-info .user-leave {
+  margin-left: auto;
+  margin-top: auto;
+  padding: 25px;
+}
+.user-info .user-leave input {
+  font-size: 15px;
+  color: var(--six-text-color);
+}
+
+.basket,
+.delivery {
+  color: var(--four-text-color);
+  font-family: "Gravity Regular", sans-serif;
+  background-position: right 33px bottom 33px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.basket, .delivery {
+  background-image: url(../img/bg/basket.svg);
+}
+.basket .basket-title, .basket .delivery-title, .delivery .basket-title, .delivery .delivery-title {
+  font-size: 32px;
+  margin-top: 48px;
+}
+.basket .basket-descript, .basket .delivery-descript, .delivery .basket-descript, .delivery .delivery-descript {
+  font-family: "Gravity Light", sans-serif;
+  display: flex;
+  margin-top: 13px;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+  max-height: 55px;
+  font-size: 20px;
+}
+.basket .basket-button, .basket .delivery-button, .delivery .basket-button, .delivery .delivery-button {
+  font-family: "Gravity Regular", sans-serif;
+  font-size: 20px;
+  color: var(--four-text-color);
+  background-color: var(--second-bg-color);
+  padding: 15px 38px;
+  border: none;
+  margin-top: 45px;
+  border-radius: 10px;
+  transition: background-color 0.2s linear;
+  cursor: pointer;
+}
+.basket .basket-button:hover, .basket .delivery-button:hover, .delivery .basket-button:hover, .delivery .delivery-button:hover {
+  background-color: var(--main-bg-hover);
+}
+
+.delivery {
+  background-image: url(../img/bg/delivery.svg);
+}/*# sourceMappingURL=user.css.map */

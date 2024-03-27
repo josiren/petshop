@@ -1,4 +1,5 @@
-.join-us {
+.join-us,
+.buy-us {
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -11,14 +12,16 @@
   padding-bottom: 46px;
   min-height: 263px;
   border-radius: 10px;
-  color: var(--four--text-color);
+  color: var(--four-text-color);
 }
-.join-us h2 {
+.join-us h2,
+.buy-us h2 {
   margin-top: 46px;
   letter-spacing: 1px;
   text-align: center;
 }
-.join-us p {
+.join-us p,
+.buy-us p {
   text-align: center;
   font-family: "Gravity Book", sans-serif;
   font-size: 20px;
@@ -27,40 +30,49 @@
   line-height: 23px;
   padding: 0px 25px;
 }
-.join-us form.go-join {
+.join-us form.go-join,
+.buy-us form.go-join {
   display: flex;
   margin: 32px 89px 0px 89px;
   align-items: center;
   position: relative;
   justify-content: space-between;
 }
-.join-us form.go-join::before {
+.join-us form.go-join::before,
+.buy-us form.go-join::before {
   content: "";
-  margin: 0 3px;
   top: 47.5px;
   position: absolute;
   width: 100%;
   height: 1.5px;
-  background-color: var(--main-text-color);
+  background-color: var(--five-bg-color);
 }
-.join-us form.go-join input.email {
+.join-us form.go-join input.email,
+.buy-us form.go-join input.email {
   background-color: transparent;
   border: none;
   font-family: "Gravity Light", sans-serif;
-  font-size: 23px;
+  font-size: 20px;
   outline: none;
   width: 50.56%;
+  color: var(--three-text-color);
 }
-.join-us form.go-join input.email::-moz-placeholder {
+.join-us form.go-join input.email::-moz-placeholder, .buy-us form.go-join input.email::-moz-placeholder {
+  font-family: "Gravity UltraLight", sans-serif;
   color: rgba(0, 0, 0, 0.4);
 }
-.join-us form.go-join input.email::placeholder {
+.join-us form.go-join input.email::placeholder,
+.buy-us form.go-join input.email::placeholder {
+  font-family: "Gravity UltraLight", sans-serif;
   color: rgba(0, 0, 0, 0.4);
 }
-.join-us form.go-join input.regisration {
+.join-us input.regisration,
+.join-us input.login,
+.buy-us input.regisration,
+.buy-us input.login {
   font-family: "Gravity Regular", sans-serif;
   font-size: 20px;
-  color: var(--four--text-color);
+  color: var(--four-text-color);
   background-color: var(--second-bg-color);
   padding: 15px 38px;
   border: none;
@@ -69,6 +81,9 @@
   transition: background-color 0.2s linear;
   cursor: pointer;
 }
-.join-us form.go-join input.regisration:hover {
+.join-us input.regisration:hover,
+.join-us input.login:hover,
+.buy-us input.regisration:hover,
+.buy-us input.login:hover {
   background-color: var(--main-bg-hover);
 }/*# sourceMappingURL=join-us.css.map */

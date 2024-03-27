@@ -1,45 +1,41 @@
-// Header
-.header {
+// Header main
+.header__main {
   padding: 0px calc(50% - 734px);
   display: flex;
-  flex-direction: column;
-  &__main {
-    display: flex;
-    margin-top: 100px;
-    justify-content: space-between;
+  margin-top: 100px;
+  justify-content: space-between;
+  position: relative;
+  height: 660px;
+  .l-side {
     position: relative;
-    height: 660px;
-    .l-side {
-      position: relative;
-      z-index: 2;
-      margin: 128px 0px 0px 57px;
-      font-family: "Gravity Regular", sans-serif;
-      max-width: 677px;
-      h1 {
-        font-size: 40px;
-        line-height: 45px;
-        letter-spacing: 1.9px;
-        span {
-          color: var(--second-text-color);
-        }
-      }
-      p {
-        font-size: 24px;
-        margin-top: 26px;
-        line-height: 29px;
-        letter-spacing: 0.9px;
+    z-index: 2;
+    margin: 128px 0px 0px 57px;
+    font-family: "Gravity Regular", sans-serif;
+    max-width: 677px;
+    h1 {
+      font-size: calc(24px + 16 * (100vw / 1920));
+      line-height: 45px;
+      letter-spacing: 1.9px;
+      span {
+        color: var(--second-text-color);
       }
     }
-    .r-side {
-      img {
-        max-width: 120%;
-        margin-top: -20px;
-        height: auto;
-        margin-left: -160px;
-        width: auto\5;
-        min-height: 500px;
-        min-width: 600px;
-      }
+    p {
+      font-size: calc(14px + 10 * (100vw / 1920));
+      margin-top: 26px;
+      line-height: 29px;
+      letter-spacing: 0.9px;
+    }
+  }
+  .r-side {
+    img {
+      max-width: 120%;
+      margin-top: -20px;
+      height: auto;
+      margin-left: -160px;
+      width: auto\5;
+      min-height: 500px;
+      min-width: 600px;
     }
   }
 }
@@ -49,6 +45,60 @@ img.paw2 {
   position: absolute;
   top: 1624px;
   left: 0;
+}
+
+// Swiper section
+// Section product
+.swiper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin-top: 248px;
+  font-family: "Gravity Regular", sans-serif;
+
+  .swiper-wrapper {
+    margin-top: 87px;
+    z-index: 2;
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      min-width: 160px;
+    }
+    .item__description {
+      margin-top: 15px;
+      margin-left: 5px;
+      height: 142px;
+      display: flex;
+      flex-direction: column;
+      .item__price {
+        font-size: calc(14px + 10 * (100vw / 1920));
+      }
+
+      .item__name {
+        margin-top: 12px;
+        font-size: calc(12px + 10 * (100vw / 1920));
+        max-width: 200px;
+        color: var(--three-text-color);
+        span {
+          color: var(--main-text-color);
+        }
+      }
+      .item__rate {
+        margin-top: auto;
+        display: flex;
+        gap: 11px;
+        font-size: calc(12px + 10 * (100vw / 1920));
+        align-items: center;
+        @media (max-width: 1300px) {
+          margin-top: 21px;
+        }
+        img {
+          max-width: 100%;
+          width: calc(20px + 10 * (100vw / 1920));
+        }
+      }
+    }
+  }
 }
 
 // Section why choose us
@@ -94,15 +144,8 @@ img.paw2 {
     margin-top: 55px;
     max-width: 100%;
     height: auto;
-    width: auto\5;
-    min-height: 427px;
-    min-width: 706px;
-  }
-}
 
-// Bg image 3
-img.paw3 {
-  position: absolute;
-  top: 2190px;
-  left: 973.31px;
+    min-width: 340px;
+    min-height: 198px;
+  }
 }
