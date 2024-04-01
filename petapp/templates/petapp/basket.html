@@ -15,53 +15,82 @@
 <!-- Section - basket -->
 <section class="basket products">
   <h2>Моя корзина</h2>
-  <!-- <h3 class="empty-text">здесь пока пусто</h3> 
-    если ничего нет в корзине -->
+    {% if basket_items %}
   <div class="p__wrapper">
+    {% for item in basket_items %}
     <div class="p__item">
-      <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product" class="title">
+      <img src="{{ MEDIA_URL }}{{ item.product.photo_product.url }}" alt="product" class="title">
       <div class="item__description">
-        <h4 class="item__price">989₽</h4>
-        <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
-        <div class="rating__group">
+        <p class="item__name"><span>{{ item.product.product_name }}</span> / {{ item.product.category }} для 
+          {% for animal_type in item.product.animal_type.all %}
+              {{ animal_type.name }} 
+          {% endfor %}
+          {{ item.product.weight }} kg</p>
+          <div class="item__quantity">
+            <p class="item__name">Количество: {{ item.quantity }}</p>
+            <div class="quantity-buttons">
+                <a id="btn" href="{% url 'subtraction_basket' product=item.pk basket=basket.pk %}" class="btn btn-white border-secondary bg-white btn-md mb-2">-<i class="fas fa-sync"></i></a>
+                <a href="{% url 'addition_basket' product=item.pk basket=basket.pk %}" id="btn" class="btn btn-white border-secondary bg-white btn-md mb-2">+<i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        <h4 class="item__price">Цена: {{ item.product.price }} ₽</h4>
+        
+        <!-- <div class="rating__group">
           <input class="rating__star" type="radio" value="1" aria-label="Ужасно">
           <input class="rating__star" type="radio" value="2" aria-label="Сносно">
           <input class="rating__star" type="radio" value="3" aria-label="Нормально">
           <input class="rating__star" type="radio" value="4" aria-label="Хорошо">
           <input class="rating__star" type="radio" value="5" aria-label="Отлично">
+        </div> -->
         </div>
+        {% for message in messages %}
+        <div class="form-error">{{ message }}</div>
+          {% endfor %}
       </div>
+      {% endfor %}
     </div>
-    <div class="p__item">
-      <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product" class="title">
-      <div class="item__description">
-        <h4 class="item__price">989₽</h4>
-        <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
-        <div class="rating__group">
-          <input class="rating__star" type="radio" value="1" aria-label="Ужасно">
-          <input class="rating__star" type="radio" value="2" aria-label="Сносно">
-          <input class="rating__star" type="radio" value="3" aria-label="Нормально">
-          <input class="rating__star" type="radio" value="4" aria-label="Хорошо">
-          <input class="rating__star" type="radio" value="5" aria-label="Отлично">
-        </div>
-      </div>
-    </div>
-    <div class="p__item">
-      <img src="{% static 'petapp/page/mainpage/img/product-top/product_1.png' %}" alt="product" class="title">
-      <div class="item__description">
-        <h4 class="item__price">989₽</h4>
-        <p class="item__name"><span>Wagg</span> / Корм для собак 5kg</p>
-        <div class="rating__group">
-          <input class="rating__star" type="radio" value="1" aria-label="Ужасно">
-          <input class="rating__star" type="radio" value="2" aria-label="Сносно">
-          <input class="rating__star" type="radio" value="3" aria-label="Нормально">
-          <input class="rating__star" type="radio" value="4" aria-label="Хорошо">
-          <input class="rating__star" type="radio" value="5" aria-label="Отлично">
-        </div>
-      </div>
-    </div>
+    {% else %}
+    <h3 class="empty-text">Ваша корзина пуста</h3>
+  {% endif %}
   </div>
+  <form method="post">
+    {% csrf_token %}
+    <h2>Итого: {{ basket_total }} ₽</h2>
+    <div><input type="submit" value="Заказать" role="button" class="order-button"/></div>
+</form>
 </section>
 
+<!-- 
+  Добавь в верстку,либо переделай
+  .item__quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantity-buttons {
+  display: flex;
+}
+
+.quantity-buttons a {
+  margin-left: 7px;
+} 
+
+input.order-button {
+    font-family: "Gravity Regular", sans-serif;
+    font-size: 20px;
+    color: var(--four-text-color);
+    background-color: var(--second-bg-color);
+    padding: 15px 38px;
+    border: none;
+    margin-top: 45px;
+    border-radius: 10px;
+    transition: background-color 0.2s linear;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    margin: 20px auto 50px auto;
+}
+-->
 <script src="{% static 'petapp/page/basketpage/js/basket.js' %}" type="module"></script>
 {% endblock %}
