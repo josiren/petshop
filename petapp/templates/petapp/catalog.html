@@ -39,8 +39,11 @@
                       0
                     {% endif %}</h3>
                 </div>
-                <input type="button" class="product__add"></button>
+                <a href="{% url 'add_basket' product.pk %}"><input type="button" class="product__add" href="{% url 'add_basket' product.pk %}"></button></a>
               </div>
+              {% for message in messages %}
+              <div class="form-error">{{ message }}</div>
+                {% endfor %}
             </div>
           {% endfor %}
         </div>
