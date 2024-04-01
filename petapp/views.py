@@ -1,5 +1,5 @@
 import random
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from petapp.models import Customer
 from petapp.forms import *
 from django.db import IntegrityError
@@ -12,6 +12,8 @@ from django.contrib import messages
 from .authentication import EmailAuthBackend
 from django.core.files.base import ContentFile
 from django.db.models import Avg
+from django.http import Http404, HttpResponse
+from yookassa import Configuration, Payment
 
 
 # Main navigation pages
@@ -110,15 +112,90 @@ def logout_view(request):
 
 
 # Bakset page 
+@login_required
 def basket(request):
-    return render (request, 'petapp/basket.html')
+    customer = Customer.objects.get(user=request.user)
+    if not Basket.objects.filter(user=customer).exists():
+        basket = Basket.objects.create(user=customer)
+    basket = Basket.objects.get(user=customer)
+    basket_items = BasketProduct.objects.filter(basket=basket).order_by('product_id')
+    basket_total = 0
+    for a in basket_items:
+        basket_total += int(a.quantity) * int(a.product.price)
+
+    if request.method == 'POST':
+        form = PaymentForm(request.POST)
+        if form.is_valid():
+            amount = basket_total
+
+            order_detail = OrderDetail.objects.create(
+                amount=amount,
+                basket=basket
+            )
+            order = Order.objects.create(
+                user=customer,
+                details=order_detail
+            )
+            return redirect('buy', order_num=order.id)
+    else:
+        form = PaymentForm()
+
+    return render(request, 'petapp/basket.html', {"basket_items": basket_items, "basket_total": basket_total, "basket": basket, 'form': form})
+
+@login_required
+def add_basket(request, pk):
+    customer = Customer.objects.get(user=request.user)
+    if Basket.objects.filter(user=customer).exists():
+        basket = Basket.objects.get(user=customer)
+        product = get_object_or_404(Product, pk=pk)
+        if BasketProduct.objects.filter(product=product, basket=basket).exists():
+            basket_product = BasketProduct.objects.get(product=product, basket=basket)
+            if int(basket_product.quantity) >= basket_product.product.stock:
+                messages.error(request, "Ошибка, товаров на складе больше нет.")
+            else:
+                basket_items = BasketProduct.objects.filter(pk=basket_product.pk, basket=basket).update(quantity=int(basket_product.quantity) + 1)
+        else:
+            basket_items = BasketProduct.objects.create(product=product, basket=basket, quantity=1)
+    else:
+        basket = Basket.objects.create(user=customer)
+        product = get_object_or_404(Product, pk=pk)
+        basket_items = BasketProduct.objects.create(product=product, basket=basket, quantity=1)
+    return redirect('catalog')
+
+
+def addition_basket(request, product, basket):
+    basket_product = BasketProduct.objects.get(pk=product)
+    product = basket_product.product
+    if int(basket_product.quantity) >= basket_product.product.stock:
+        messages.error(request, "Ошибка, товаров на складе больше нет.")
+    else:
+        basket_items = BasketProduct.objects.filter(pk=basket_product.pk, basket=basket).update(quantity=int(basket_product.quantity) + 1)
+    return redirect("basket")
+
+def subtraction_basket(request, product, basket):
+    basket_product = BasketProduct.objects.get(pk=product)
+    if basket_product.quantity == 1:
+        basket_product.delete()
+    else:
+        basket_items = BasketProduct.objects.filter(pk=product, basket_id=basket).update(quantity = int(basket_product.quantity) - 1)
+    return redirect("basket")
 
 #User page
 def user(request):
     if request.user.is_authenticated:
         customer = Customer.objects.get(user=request.user)
         user = customer.user
-    return render(request, 'petapp/user.html', {'user': user, 'customer': customer})
+
+    if not Basket.objects.filter(user=customer).exists():
+        basket = Basket.objects.create(user=customer)
+    basket = Basket.objects.get(user=customer)
+    basket_items = BasketProduct.objects.filter(basket=basket).order_by('product_id')
+    total_items = 0
+    basket_total = 0
+    for a in basket_items:
+        basket_total += int(a.quantity) * int(a.product.price)
+        total_items += a.quantity 
+    return render(request, 'petapp/user.html', {'user': user, 'customer': customer,"basket_total": basket_total, 'total_items': total_items})
 
 def user_edit(request):
     if request.user.is_authenticated:
@@ -188,4 +265,74 @@ def user_edit(request):
             return redirect('user')
 
     return render(request, 'petapp/user_edit.html', {'user': user, 'customer': customer})
+
+
+def buy_product(request, order_num):
+    order = Order.objects.filter(id=order_num).first()
+    if order and order.details:
+        uuids = uuid.uuid4()
+        payment = Payment.create({
+            "amount": {
+                "value": str(order.details.amount),
+                "currency": "RUB"
+            },
+            "confirmation": {
+                "type": "redirect",
+                "return_url": f"http://127.0.0.1:8000/basket/buy/{order.id}/confirm-buy/"
+            },
+            "capture": True,
+            "description": f"Заказ {order.id}"
+        }, uuids)
+
+        payment_id = payment.id
+        order.details.payment_id = payment_id
+        order.details.status = 'processing'
+        order.details.save()
+
+        return redirect(f'https://yoomoney.ru/checkout/payments/v2/contract?orderId={payment_id}')
+    else:
+        # Обработка случая, когда заказ не найден или не имеет деталей
+        return HttpResponse("Заказ не найден или не имеет деталей")
+    
+
+def buy_confirm(request, pk):
+    order = Order.objects.filter(order_number=pk).first()
+    payment = Payment.find_one(OrderDetail.payment_id)
+    
+    if payment.description == f"Заказ {order.id}" and order.order_number == pk and request.user == order.user:
+        if payment.status == "succeeded":
+            error = False
+            OrderDetail.status = 'paid'
+            order.save()
+            basket = get_object_or_404(Basket, user=request.user)
+            basket_items = BasketProduct.objects.filter(basket=basket).order_by('product_id')
+            
+            for item in basket_items:
+                product = Product.objects.get(pk=item.product.pk)
+                if PurchaseHistory.objects.filter(order_number=order, product=product).exists():
+                    break
+                else:
+                    PurchaseHistory.objects.create(order_number=order, user=request.user, product=product, quantity=item.quantity)
+                    
+                purchase = PurchaseHistory.objects.get(order_number=order, product=product)
+                
+                
+                product_detail = Product.objects.filter(user__isnull=True, product=product)[:item.quantity]
+                
+                for pr_det in product_detail:
+                    purchase.details.add(pr_det)
+                    pr_det.user = request.user
+                    pr_det.save()
+                if product.stock - item.quantity == 0:
+                    product.availability = True
+                else:
+                    product.stock = product.stock - item.quantity
+                product.save()
+
+            basket.delete()           
+            return redirect('profile')
+        else:
+            error = True
+            return render(request, 'petapp/confirm.html', {'basket_items': basket_items, 'error':error})
+    raise Http404("Произошла ошибка" )
 
