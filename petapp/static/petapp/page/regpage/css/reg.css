@@ -18,6 +18,7 @@
   flex-direction: row;
   width: 100%;
   gap: 122px;
+  margin-top: 40px;
 }
 .reg input {
   font-family: "Gravity Regular", sans-serif;
@@ -29,9 +30,6 @@
 .reg .reg__item:nth-child(2) {
   margin-top: 0;
 }
-.reg .reg__item:nth-child(1) {
-  margin-top: 45px;
-}
 .reg .r-side,
 .reg .l-side {
   display: flex;
@@ -42,4 +40,12 @@
 }
 .reg p {
   margin-top: 12px;
+}
+
+input.btn-login {
+  margin-bottom: 20px;
+}
+
+.user-box {
+  height: auto;
 }/*# sourceMappingURL=reg.css.map */

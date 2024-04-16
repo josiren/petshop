@@ -15,7 +15,7 @@
   <section class="products">
     <h2>Каталог</h2>
       {% if message %}
-        <p>{{ message }}</p>
+        <p style="padding-top: 90px;">{{ message }}</p>
       {% else %}
         <div class="p__wrapper">
           {% for product in products %}
@@ -39,7 +39,7 @@
                       0
                     {% endif %}</h3>
                 </div>
-                <a href="{% url 'add_basket' product.pk %}"><input type="button" class="product__add" href="{% url 'add_basket' product.pk %}"></button></a>
+                <a href="{% url 'add_basket' product.pk %}"><input type="button" class="product__add"/></a>
               </div>
               {% for message in messages %}
               <div class="form-error">{{ message }}</div>

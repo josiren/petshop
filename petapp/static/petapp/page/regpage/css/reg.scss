@@ -16,6 +16,7 @@
   flex-direction: row;
   width: 100%;
   gap: 122px;
+  margin-top: 40px;
   input{
     font-family: "Gravity Regular", sans-serif;
     color: var(--three-text-color);
@@ -25,9 +26,7 @@
     &:nth-child(2) {
       margin-top: 0;
     }
-    &:nth-child(1) {
-      margin-top: 45px;
-    }
+
   }
   .r-side,
   .l-side {
@@ -40,4 +39,12 @@
   p {
     margin-top: 12px;
   }
+
+}
+input.btn-login{
+  margin-bottom: 20px;
+}
+.user-box{
+  height: auto;
+
 }

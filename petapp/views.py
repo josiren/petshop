@@ -13,7 +13,6 @@ from .authentication import EmailAuthBackend
 from django.core.files.base import ContentFile
 from django.db.models import Avg
 from django.http import Http404, HttpResponse
-from yookassa import Configuration, Payment
 
 
 # Main navigation pages
@@ -267,7 +266,7 @@ def user_edit(request):
     return render(request, 'petapp/user_edit.html', {'user': user, 'customer': customer})
 
 
-def buy_product(request, order_num):
+
     order = Order.objects.filter(id=order_num).first()
     if order and order.details:
         uuids = uuid.uuid4()
@@ -295,7 +294,6 @@ def buy_product(request, order_num):
         return HttpResponse("Заказ не найден или не имеет деталей")
     
 
-def buy_confirm(request, pk):
     order = Order.objects.filter(order_number=pk).first()
     payment = Payment.find_one(OrderDetail.payment_id)
     
