@@ -21,6 +21,7 @@
     <div class="p__item">
       <img src="{{ MEDIA_URL }}{{ item.product.photo_product.url }}" alt="product" class="title">
       <div class="item__description">
+        <h4 class="item__price">{{ item.product.price }} ₽</h4>
         <p class="item__name"><span>{{ item.product.product_name }}</span> / {{ item.product.category }} для 
           {% for animal_type in item.product.animal_type.all %}
               {{ animal_type.name }} 
@@ -33,7 +34,7 @@
                 <a href="{% url 'addition_basket' product=item.pk basket=basket.pk %}" id="btn" class="btn btn-white border-secondary bg-white btn-md mb-2">+<i class="fas fa-trash"></i></a>
             </div>
         </div>
-        <h4 class="item__price">Цена: {{ item.product.price }} ₽</h4>
+
         
         <!-- <div class="rating__group">
           <input class="rating__star" type="radio" value="1" aria-label="Ужасно">
@@ -53,44 +54,6 @@
     <h3 class="empty-text">Ваша корзина пуста</h3>
   {% endif %}
   </div>
-  <form method="post">
-    {% csrf_token %}
-    <h2>Итого: {{ basket_total }} ₽</h2>
-    <div><input type="submit" value="Заказать" role="button" class="order-button"/></div>
-</form>
 </section>
-
-<!-- 
-  Добавь в верстку,либо переделай
-  .item__quantity {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.quantity-buttons {
-  display: flex;
-}
-
-.quantity-buttons a {
-  margin-left: 7px;
-} 
-
-input.order-button {
-    font-family: "Gravity Regular", sans-serif;
-    font-size: 20px;
-    color: var(--four-text-color);
-    background-color: var(--second-bg-color);
-    padding: 15px 38px;
-    border: none;
-    margin-top: 45px;
-    border-radius: 10px;
-    transition: background-color 0.2s linear;
-    cursor: pointer;
-    display: flex;
-    text-align: center;
-    margin: 20px auto 50px auto;
-}
--->
 <script src="{% static 'petapp/page/basketpage/js/basket.js' %}" type="module"></script>
 {% endblock %}

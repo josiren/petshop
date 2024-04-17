@@ -5,7 +5,6 @@
 }
 
 .edit-info {
-  max-width: 959px;
   width: 100%;
   gap: 0;
   -moz-column-gap: 122px;
@@ -13,7 +12,7 @@
   row-gap: 73px;
   padding-bottom: 20px;
   flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 @media screen and (max-width: 500px) {
@@ -48,6 +47,7 @@ input.btn-login {
   margin-top: 0;
   color: var(--four-text-color);
   margin-right: 0;
+  margin-bottom: 0;
 }
 @media screen and (max-width: 500px) {
   input.btn-login {
@@ -59,8 +59,8 @@ input.btn-login {
 .form__buttons {
   display: flex;
   gap: 25px;
-  margin-left: auto;
   align-items: center;
+  margin-left: 32em;
 }
 @media screen and (max-width: 500px) {
   .form__buttons {
@@ -73,6 +73,10 @@ input.btn-login {
   .reg__item.--phone {
     margin-top: 0 !important;
   }
+}
+
+.reg__item {
+  width: 303px;
 }
 
 .user-leave {

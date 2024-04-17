@@ -13,8 +13,8 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 def validate_image_size(image):
-    max_width = 300
-    max_height = 400
+    max_width = 500
+    max_height = 500
     img = Image.open(image)
     if img.width > max_width or img.height > max_height:
         raise ValidationError("Максимальные допустимые размеры изображения - 300x400 пикселей.")

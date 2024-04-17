@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'Pet_store',
         'USER': 'postgres',
         'PASSWORD': '111',
-        'HOST': 'localhost',
+        'HOST': '192.168.27.4',
         'PORT': 5432,
     }
 }
