@@ -4,4 +4,12 @@
 
 .user-box {
   align-items: normal;
+}
+
+input.btn-login {
+  margin-top: 123px;
+}
+
+.auth {
+  gap: 25px;
 }/*# sourceMappingURL=auth.css.map */

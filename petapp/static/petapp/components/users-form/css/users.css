@@ -57,12 +57,12 @@
   padding-left: 16px;
 }
 
-a {
+a.reg-text {
   color: var(--six-text-color);
   text-align: center;
   transition: 0.2s;
 }
-a:hover {
+a.reg-text:hover {
   text-shadow: 1px 2px 10px #57a09d;
 }
 

@@ -62,7 +62,13 @@
   <section class="buy-us">
     <h2>Желаете приобрести товар?</h2>
     <p>Авторизируйтесь для оформления заказа вашим любимцам</p>
-    <input type="button" class="login" value="Авторизироваться">
+    <input type="button" class="login" id="lgnbtn" value="Авторизироваться">
+    <script>
+      let lgnbtn = document.getElementById("lgnbtn");
+      lgnbtn.addEventListener("click", function() { 
+        window.location.href = "/auth"; 
+      });
+    </script>
   </section>
 </div>
 </div>

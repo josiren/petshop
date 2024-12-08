@@ -60,3 +60,18 @@
     }
   }
 }
+.item__quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantity-buttons {
+  display: flex;
+  font-size: 22px;
+}
+
+.quantity-buttons a {
+  margin-left: 7px;
+  color: black;
+} 
